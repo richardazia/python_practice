@@ -109,3 +109,39 @@ print (number_sequence[2:20:2])
 word = "pineapples"
 
 print (word[:4])
+
+print('''hello''') #triple quote
+
+# print("****** The quick Brown Password Guesser ******")
+
+# guess_password = input("Can you guess the password? ")
+
+# print("You guessed: " + guess_password + ". You were wrong!")
+
+# question_one = input("What is your first name?")
+# question_two = input("Are you watching the Tour De France?")
+
+# combined_answers = question_one + ": "+ question_two
+# print("blah blah, " + combined_answers)
+
+year = 365
+age = 18
+int_age = int(age)
+type(int(age))
+
+days_old = int_age * year
+
+print(days_old)
+
+age_in_years = input("How many years old are you? ")
+int_age_in_years = int(age_in_years)
+
+age_in_days = int_age_in_years * year
+f_phrase = f"You are {age_in_days} days old"
+print(f_phrase)
+
+print("You are at least " + str(age_in_days) + " days old. Congrats on being on this planet for so many revolutions.")
+
+eff = f"There are {24*60*60} seconds in a day"
+
+print(eff)
