@@ -13,12 +13,24 @@ print(full_name)
 
 print(first[0] + " " + last[0])
 
+# course solution 
+initials = first[0] + last[0]
+print(initials)
+
 # - Create an "initials_2" variable that holds the first character of first followed by the first character of last, with periods after each letter!
 # - Print it out
 
 print(first[0] + "." + last[0] + ".")
 
+initials2 = first[0] + "." + last[0] + "."
+
+print(initials2)
+
 # Create a "nickname" variable that holds the first 4 characters of "last" (use a slice)
 # Print it out 
 
 print(last[0:4])
+
+nickname = last[0:4]
+
+print(nickname)
