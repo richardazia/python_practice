@@ -11,7 +11,8 @@
 secret_num = 42
 
 # Increase secret_num by 1
-secret_num += 42
+secret_num += 1
+# I entered the wrong number here. Corrected now, and the app works as expected.
 
 # Next, take the new number and double it
 secret_num *= 2
