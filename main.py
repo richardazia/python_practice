@@ -133,15 +133,43 @@ days_old = int_age * year
 
 print(days_old)
 
-age_in_years = input("How many years old are you? ")
-int_age_in_years = int(age_in_years)
+# age_in_years = input("How many years old are you? ")
+# int_age_in_years = int(age_in_years)
 
-age_in_days = int_age_in_years * year
-f_phrase = f"You are {age_in_days} days old"
-print(f_phrase)
+# age_in_days = int_age_in_years * year
+# f_phrase = f"You are {age_in_days} days old"
+# print(f_phrase)
 
-print("You are at least " + str(age_in_days) + " days old. Congrats on being on this planet for so many revolutions.")
+# print("You are at least " + str(age_in_days) + " days old. Congrats on being on this planet for so many revolutions.")
 
-eff = f"There are {24*60*60} seconds in a day"
+# eff = f"There are {24*60*60} seconds in a day"
 
+# print(eff)
+
+# The challenge
+
+# Shopping Cart Exercise
+
+#Write a Python script that does the following:
+
+# - Prints out a “banner” to welcome users to our shop
+
+print("***** Welcome to the Harmonica Store *****")
+# - Asks the user for the name of the item they are buying
+item_name = input("Which item would you like to buy? ")
+
+# - Asks the user for the price of that item
+item_price = input("Please specify the price of the item. ")
+
+# - Asks the user for the quantity they are purchasing
+item_quantity = input("How many items would you like to purchase? ")
+
+# - Prints out a message that includes their subtotal (quantity 𝚡 price)
+subtotal = float(item_price) * float(item_quantity)
+round(subtotal, 2)
+summary = "You have selected to buy " + str(item_quantity) + " " + item_name + " at " + str(item_price) + ". This will cost " + str(subtotal) + "CHF."
+print(summary)
+
+# And as an f string
+eff = f"You have selected to buy {item_quantity} {item_name} at {item_price}. This will cost {subtotal}."
 print(eff)
