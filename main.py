@@ -153,23 +153,26 @@ print(days_old)
 #Write a Python script that does the following:
 
 # - Prints out a “banner” to welcome users to our shop
-
+print("*" * 42)
 print("***** Welcome to the Harmonica Store *****")
+print("*" * 42)
+print("")
+
 # - Asks the user for the name of the item they are buying
 item_name = input("Which item would you like to buy? ")
 
 # - Asks the user for the price of that item
-item_price = input("Please specify the price of the item. ")
+item_price = input(f"Please specify the price of the {item_name}. ")
 
 # - Asks the user for the quantity they are purchasing
-item_quantity = input("How many items would you like to purchase? ")
+item_quantity = input(f"How many {item_name} would you like to purchase? ")
 
 # - Prints out a message that includes their subtotal (quantity 𝚡 price)
 subtotal = float(item_price) * float(item_quantity)
 round(subtotal, 2)
-summary = "You have selected to buy " + str(item_quantity) + " " + item_name + " at " + str(item_price) + ". This will cost " + str(subtotal) + "CHF."
+summary = "You have selected to buy " + str(item_quantity) + " " + item_name + " at " + str(item_price) + ". This will cost " + str(subtotal) + " CHF."
 print(summary)
 
 # And as an f string
-eff = f"You have selected to buy {item_quantity} {item_name} at {item_price}. This will cost {subtotal}."
+eff = f"You have selected to buy {item_quantity} {item_name} at {item_price}. This will cost {subtotal} CHF."
 print(eff)
