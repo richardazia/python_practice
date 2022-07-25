@@ -20,97 +20,97 @@ if __name__ == '__main__':
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 
-print(1+2+3+4)
-print("Go for a bike ride")
+# print(1+2+3+4)
+# print("Go for a bike ride")
 
-print (45*45)
+# print (45*45)
 
-print (45 * 45 * 45)
+# print (45 * 45 * 45)
 
-print (12 ** 12)
+# print (12 ** 12)
 
-print (5//2)
-print (10//3)
+# print (5//2)
+# print (10//3)
 
-print (10 % 2)
-print (12 % 4)
+# print (10 % 2)
+# print (12 % 4)
 
-print (33 % 2)
+# print (33 % 2)
 
-print (700 % 200)
+# print (700 % 200)
 
-print (10 % 7)
+# print (10 % 7)
 # no comment, or maybe there is. I am a comment.
 
-age = 48
-print(age)
+# age = 48
+# print(age)
 
-birthday = age + 1
-print (birthday)
+# birthday = age + 1
+# print (birthday)
 
 #we can also reassign the variable
-age = age + 1
-print ("age + 1")
-print (age)
+# age = age + 1
+# print ("age + 1")
+# print (age)
 
 #constant
 
-PI = 3.14159
+# PI = 3.14159
 
-week_day = "Friday"
+# week_day = "Friday"
 
-print (PI)
+# print (PI)
 
-print (week_day)
+# print (week_day)
 
-site_visitors = 1942
-site_visitors += 1
-print (site_visitors)
-site_visitors += 1
-print (site_visitors)
-site_visitors += 1
-print (site_visitors)
-site_visitors += 1
-print (site_visitors)
-site_visitors += 1
-print (site_visitors)
-site_visitors += 1
-print (site_visitors)
-site_visitors += 1
-print (site_visitors)
-site_visitors += 1
-print (site_visitors)
-site_visitors += 1
-print (site_visitors)
+# site_visitors = 1942
+# site_visitors += 1
+# print (site_visitors)
+# site_visitors += 1
+# print (site_visitors)
+# site_visitors += 1
+# print (site_visitors)
+# site_visitors += 1
+# print (site_visitors)
+# site_visitors += 1
+# print (site_visitors)
+# site_visitors += 1
+# print (site_visitors)
+# site_visitors += 1
+# print (site_visitors)
+# site_visitors += 1
+# print (site_visitors)
+# site_visitors += 1
+# print (site_visitors)
 
-print ("hello"[1])
+# print ("hello"[1])
 
-first_name = "Duck"
-last_name = "McDuck"
+# first_name = "Duck"
+# last_name = "McDuck"
 
-print (first_name[0])
-print (last_name[0])
+# print (first_name[0])
+# print (last_name[0])
 
-alf = "I love to eat cats"
+# alf = "I love to eat cats"
 
-print (alf[2:6])
+# print (alf[2:6])
 
-bianimal = "CatDog"
+# bianimal = "CatDog"
 
-print(bianimal[0:3])
-print(bianimal[3:6])
+# print(bianimal[0:3])
+# print(bianimal[3:6])
 
-number_sequence = "0,1,2,3,4,5,6,7,8,9,0"
+# number_sequence = "0,1,2,3,4,5,6,7,8,9,0"
 # We don't need to specify the end if we want every number beyond the in point. 
-print (number_sequence[2:])
-print (number_sequence[2:20:3]) #with this notation we can say go from position two to 12 but take every third number
-print (number_sequence[2:20:2])
+# print (number_sequence[2:])
+# print (number_sequence[2:20:3]) #with this notation we can say go from position two to 12 but take every third number
+# print (number_sequence[2:20:2])
 
-word = "pineapples"
+# word = "pineapples"
 
-print (word[:4])
+# print (word[:4])
 
-print('''hello''') #triple quote
+# print('''hello''') #triple quote
 
 # print("****** The quick Brown Password Guesser ******")
 
@@ -124,14 +124,14 @@ print('''hello''') #triple quote
 # combined_answers = question_one + ": "+ question_two
 # print("blah blah, " + combined_answers)
 
-year = 365
-age = 18
-int_age = int(age)
-type(int(age))
+# year = 365
+# age = 18
+# int_age = int(age)
+# type(int(age))
 
-days_old = int_age * year
+# days_old = int_age * year
 
-print(days_old)
+# print(days_old)
 
 # age_in_years = input("How many years old are you? ")
 # int_age_in_years = int(age_in_years)
@@ -153,26 +153,82 @@ print(days_old)
 #Write a Python script that does the following:
 
 # - Prints out a “banner” to welcome users to our shop
-print("*" * 42)
-print("***** Welcome to the Harmonica Store *****")
-print("*" * 42)
-print("")
+# print("*" * 42)
+# print("***** Welcome to the Harmonica Store *****")
+# print("*" * 42)
+# print("")
 
 # - Asks the user for the name of the item they are buying
-item_name = input("Which item would you like to buy? ")
+# item_name = input("Which item would you like to buy? ")
 
 # - Asks the user for the price of that item
-item_price = input(f"Please specify the price of the {item_name}. ")
+# item_price = input(f"Please specify the price of the {item_name}. ")
 
 # - Asks the user for the quantity they are purchasing
-item_quantity = input(f"How many {item_name} would you like to purchase? ")
+# item_quantity = input(f"How many {item_name} would you like to purchase? ")
 
 # - Prints out a message that includes their subtotal (quantity 𝚡 price)
-subtotal = float(item_price) * float(item_quantity)
-round(subtotal, 2)
-summary = "You have selected to buy " + str(item_quantity) + " " + item_name + " at " + str(item_price) + ". This will cost " + str(subtotal) + " CHF."
-print(summary)
+# subtotal = float(item_price) * float(item_quantity)
+# round(subtotal, 2)
+# summary = "You have selected to buy " + str(item_quantity) + " " + item_name + " at " + str(item_price) + ". This will cost " + str(subtotal) + " CHF."
+# print(summary)
 
 # And as an f string
-eff = f"You have selected to buy {item_quantity} {item_name} at {item_price}. This will cost {subtotal} CHF."
-print(eff)
+# eff = f"You have selected to buy {item_quantity} {item_name} at {item_price}. This will cost {subtotal} CHF."
+# print(eff)
+
+# speed = input("How fast are you going?")
+# velocity = int(speed)
+
+# if velocity <= 50: 
+#     print("Perfect, you are driving safely")
+# else:
+#     print("SLOW DOWN")
+#     print("I will not always run")
+# print("I will always run")
+
+# python is indentation based. 
+
+colour = "purple"
+
+if colour == "green":
+    print("Beginner")
+elif colour == "blue":
+    print("intermediate")
+elif colour == 'black':
+    print("For good skiers")
+else:
+    print(f"Pardon me, I haven't a clue. {colour} is unknown to me.")
+
+num = 6
+if num < 5:
+    print("from if")
+elif num == 3:
+    print("num = 3 elif")
+elif num < 10:
+    print("from elif 2")
+
+age = 4
+
+if age < 10:
+    print("The child price is 10€")
+elif age > 65:
+    print("The OAP cost is 12€")
+else: 
+    print("The adult price is 15€")
+
+# The name challenge
+# average english name is six characters long
+
+print("*" * 30)
+print("The Name Length Checker")
+name = input("What is your name? ")
+name_length = name.__len__()
+
+if name_length > 6:
+    print(f"You have a long name, by English standards, with {name_length} characters.")
+elif name_length < 6:
+    print(f"Your name is shorter than the English average name. It is {name_length}.")
+else:
+    print(f"Your name is the Englisha verage name length with {name_length} characters.")
+
