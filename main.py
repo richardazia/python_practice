@@ -1,25 +1,3 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-from calendar import FRIDAY, weekday
-from datetime import datetime
-from sqlite3 import DateFromTicks
-from unittest.util import _MAX_LENGTH
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
 
 # print(1+2+3+4)
 # print("Go for a bike ride")
@@ -49,12 +27,12 @@ if __name__ == '__main__':
 # birthday = age + 1
 # print (birthday)
 
-#we can also reassign the variable
+# we can also reassign the variable
 # age = age + 1
 # print ("age + 1")
 # print (age)
 
-#constant
+# constant
 
 # PI = 3.14159
 
@@ -151,7 +129,7 @@ if __name__ == '__main__':
 
 # Shopping Cart Exercise
 
-#Write a Python script that does the following:
+# Write a Python script that does the following:
 
 # - Prints out a “banner” to welcome users to our shop
 # print("*" * 42)
@@ -274,24 +252,74 @@ if __name__ == '__main__':
 
 ###############
 
-from random import randint
-
-rand = randint(0,1)
-if rand == 0:
-    print("heads")
-else:
-    print("tails")
+# from random import randint
+#
+# rand = randint(0,1)
+# if rand == 0:
+#     print("heads")
+# else:
+#     print("tails")
 
 ##############
 
-message = input("Please write your message: You have a 240 character limit: ")
+# message = input("Please write your message: You have a 240 character limit: ")
+#
+# message_length = len(message)
+# message_max = 240
+#
+# if message_length <= message_max:
+#     print(f"That message can be sent. It is {message_length} characters long. You have {message_max - message_length} characters spare. " )
+# elif message_length == message_max:
+#     print("Double Twoosh, congrats")
+# else:
+#     print(f"Your message is {message_length} characters long. The character maximum is {message_max}. You are {message_length-message_max} over the limit.")
 
-message_length = len(message)
-message_max = 240
+# noise = "annoyed"
 
-if message_length <= message_max:
-    print(f"That message can be sent. It is {message_length} characters long. You have {message_max - message_length} characters spare. " )
-elif message_length == message_max:
-    print("Double Twoosh, congrats")
+# if noise == "noisy":
+#     print("Please be quiet")
+#     print(":-(" * 10)
+#     elif noise == "quiet":
+#         print("Excellent")
+#         else
+
+mood = 'duck'
+
+if mood == 'content':
+    print("Excellent, perfect")
+    print(":-)" * 10)
+elif mood == 'not happy':
+    print("Mince alors")
+elif mood == 'annoyed':
+    print("I hope the issue is quickly resolved")
+elif mood == 'hypothermic':
+    print("Eat good food and wear appropriate clothing")
 else:
-    print(f"Your message is {message_length} characters long. The character maximum is {message_max}. You are {message_length-message_max} over the limit.")
+    print("I have not learned of this expression yet")
+
+unit = input("What unit are you using? ")
+temp = int(input("What is the temperature of the water? "))
+
+if unit == 'f':
+    if temp >= 212:
+        print('water is boiling')
+    else:
+        print('Water is about to boil')
+elif unit == 'c':
+    if temp >= 100:
+        print('water is boiling')
+    else:
+        print('Water is about to boil')
+elif unit == 'k':
+    if temp >= 373:
+        print('water is boiling')
+    else:
+        print('Water is about to boil')
+else:
+    print("Input error, unit unknown")
+
+
+# I would like to add a catch error for units and temperature
+
+
+
