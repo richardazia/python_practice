@@ -74,3 +74,45 @@ In [74]: email = 'GeNius@ExAmple.Com      '
 In [75]: email.strip().lower()
 Out[75]: 'genius@example.com'
 
+### Playing with the in operator
+
+- works with letters
+- case sensitive
+
+In [21]: "A" in "abba"
+Out[21]: False
+
+In [22]: "a" in "abba"
+Out[22]: True
+
+In [23]: "i" in "supercalifragiexpialidocious"
+Out[23]: True
+
+### String comparisons.
+
+In [24]: 'a' < 'w'
+Out[24]: True
+
+In [25]: 'a' > 'w'
+Out[25]: False
+
+In [26]: ord('a)
+  Input In [26]
+    ord('a)
+           ^
+SyntaxError: EOL while scanning string literal
+
+
+In [27]: ord('a')
+Out[27]: 97
+
+In [28]: ord('1')
+Out[28]: 49
+
+#### ord numbers
+https://docs.python.org/3/library/functions.html#ord
+
+### elif
+elif is like - else if in other languages but it short circuits as soon as one condition is true
+
+
