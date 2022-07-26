@@ -7,6 +7,7 @@
 from calendar import FRIDAY, weekday
 from datetime import datetime
 from sqlite3 import DateFromTicks
+from unittest.util import _MAX_LENGTH
 
 
 def print_hi(name):
@@ -189,46 +190,108 @@ if __name__ == '__main__':
 
 # python is indentation based. 
 
-colour = "purple"
+# colour = "purple"
 
-if colour == "green":
-    print("Beginner")
-elif colour == "blue":
-    print("intermediate")
-elif colour == 'black':
-    print("For good skiers")
-else:
-    print(f"Pardon me, I haven't a clue. {colour} is unknown to me.")
+# if colour == "green":
+#     print("Beginner")
+# elif colour == "blue":
+#     print("intermediate")
+# elif colour == 'black':
+#     print("For good skiers")
+# else:
+#     print(f"Pardon me, I haven't a clue. {colour} is unknown to me.")
 
-num = 6
-if num < 5:
-    print("from if")
-elif num == 3:
-    print("num = 3 elif")
-elif num < 10:
-    print("from elif 2")
+# num = 6
+# if num < 5:
+#     print("from if")
+# elif num == 3:
+#     print("num = 3 elif")
+# elif num < 10:
+#     print("from elif 2")
 
-age = 4
+# age = 4
 
-if age < 10:
-    print("The child price is 10€")
-elif age > 65:
-    print("The OAP cost is 12€")
-else: 
-    print("The adult price is 15€")
+# if age < 10:
+#     print("The child price is 10€")
+# elif age > 65:
+#     print("The OAP cost is 12€")
+# else: 
+#     print("The adult price is 15€")
 
 # The name challenge
 # average english name is six characters long
 
-print("*" * 30)
-print("The Name Length Checker")
-name = input("What is your name? ")
-name_length = name.__len__()
+# print("*" * 30)
+# print("The Name Length Checker")
+# name = input("What is your name? ")
+# name_length = len(name)
 
-if name_length > 6:
-    print(f"You have a long name, by English standards, with {name_length} characters.")
-elif name_length < 6:
-    print(f"Your name is shorter than the English average name. It is {name_length}.")
+# if name_length > 6:
+#     print(f"You have a long name, by English standards, with {name_length} characters.")
+# elif name_length < 6:
+#     print(f"Your name is shorter than the English average name. It is {name_length}.")
+# else:
+#     print(f"Your name is the Englisha verage name length with {name_length} characters.")
+
+# Option 1
+###############
+# import random
+
+# test = random.randint(2,5)
+# print(test)
+# test = random.randint(1,10)
+# print(test)
+# test = random.randint(1,10)
+# print(test)
+# test = random.randint(1,10)
+# print(test)
+# test = random.randint(1,10)
+# print(test)
+# test = random.randint(1,10)
+# print(test)
+
+# from random import randint
+# print(randint(1,6))
+# print(randint(1,6))
+# print(randint(1,6))
+# print(randint(1,6))
+# print(randint(1,6))
+# print(randint(1,6))
+# print(randint(1,6))
+# print(randint(1,6))
+# print(randint(1,6))
+
+# import random
+
+# print(random.randint(1,6))
+# print(random.randint(1,6))
+# print(random.randint(1,6))
+# print(random.randint(1,6))
+# print(random.randint(1,6))
+# print(random.randint(1,6))
+# print(random.randint(1,6))
+# print(random.randint(1,6))
+
+###############
+
+from random import randint
+
+rand = randint(0,1)
+if rand == 0:
+    print("heads")
 else:
-    print(f"Your name is the Englisha verage name length with {name_length} characters.")
+    print("tails")
 
+##############
+
+message = input("Please write your message: You have a 240 character limit: ")
+
+message_length = len(message)
+message_max = 240
+
+if message_length <= message_max:
+    print(f"That message can be sent. It is {message_length} characters long. You have {message_max - message_length} characters spare. " )
+elif message_length == message_max:
+    print("Double Twoosh, congrats")
+else:
+    print(f"Your message is {message_length} characters long. The character maximum is {message_max}. You are {message_length-message_max} over the limit.")
