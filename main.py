@@ -326,21 +326,38 @@ height = float(input("Please enter height in m: "))
 
 bmi = round(weight/(height*height))
 
-if bmi < 16:
-    print("Severely Underweight")
-elif 16 < bmi < 18.4:
-    print(f"With a bmi of {bmi} you are underweight. Join me for breakfast.")
-elif 18.5 < bmi < 24.9:
-    print(f"With a bmi of {bmi} you are normal. Congrats.")
-elif 25.0 < bmi < 29.9:
-    print(f"With a bmi of {bmi} you are overweight. Join me for a bike ride.")
-elif 30.0 < bmi < 34.9:
-    print(f"With a bmi of {bmi} you are morbidly obese. You may need to change lifestyle.")
-elif 35.0 < bmi < 39.9:
-    print(f"With a bmi of {bmi} you are severely obese.")
-elif bmi > 39.9:
-    print(f"With a bmi of {bmi} you are morbidly obese.")
+# if bmi < 16:
+#     print("Severely Underweight")
+# elif 16 < bmi < 18.4:
+#     print(f"With a bmi of {bmi} you are underweight. Join me for breakfast.")
+# elif 18.5 < bmi < 24.9:
+#     print(f"With a bmi of {bmi} you are normal. Congrats.")
+# elif 25.0 < bmi < 29.9:
+#     print(f"With a bmi of {bmi} you are overweight. Join me for a bike ride.")
+# elif 30.0 < bmi < 34.9:
+#     print(f"With a bmi of {bmi} you are morbidly obese. You may need to change lifestyle.")
+# elif 35.0 < bmi < 39.9:
+#     print(f"With a bmi of {bmi} you are severely obese.")
+# elif bmi > 39.9:
+#     print(f"With a bmi of {bmi} you are morbidly obese.")
 
+# refactored
+if bmi < 16:
+    category = "Severely Underweight"
+elif 16 < bmi < 18.4:
+    category = "underweight. Join me for breakfast."
+elif 18.5 < bmi < 24.9:
+    category = "normal. Congrats."
+elif 25.0 < bmi < 29.9:
+    category = "overweight. Join me for a bike ride."
+elif 30.0 < bmi < 34.9:
+    category = "morbidly obese. You may need to change lifestyle."
+elif 35.0 < bmi < 39.9:
+    category = "severely obese."
+elif bmi > 39.9:
+    category = "morbidly obese."
+
+print(f"Your bmi of {bmi} makes you {category}")
 
 
 
