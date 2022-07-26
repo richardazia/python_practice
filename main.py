@@ -283,43 +283,64 @@
 #         print("Excellent")
 #         else
 
-mood = 'duck'
-
-if mood == 'content':
-    print("Excellent, perfect")
-    print(":-)" * 10)
-elif mood == 'not happy':
-    print("Mince alors")
-elif mood == 'annoyed':
-    print("I hope the issue is quickly resolved")
-elif mood == 'hypothermic':
-    print("Eat good food and wear appropriate clothing")
-else:
-    print("I have not learned of this expression yet")
-
-unit = input("What unit are you using? ")
-temp = int(input("What is the temperature of the water? "))
-
-if unit == 'f':
-    if temp >= 212:
-        print('water is boiling')
-    else:
-        print('Water is about to boil')
-elif unit == 'c':
-    if temp >= 100:
-        print('water is boiling')
-    else:
-        print('Water is about to boil')
-elif unit == 'k':
-    if temp >= 373:
-        print('water is boiling')
-    else:
-        print('Water is about to boil')
-else:
-    print("Input error, unit unknown")
+# mood = 'duck'
+#
+# if mood == 'content':
+#     print("Excellent, perfect")
+#     print(":-)" * 10)
+# elif mood == 'not happy':
+#     print("Mince alors")
+# elif mood == 'annoyed':
+#     print("I hope the issue is quickly resolved")
+# elif mood == 'hypothermic':
+#     print("Eat good food and wear appropriate clothing")
+# else:
+#     print("I have not learned of this expression yet")
+#
+# unit = input("What unit are you using? ")
+# temp = int(input("What is the temperature of the water? "))
+#
+# if unit == 'f':
+#     if temp >= 212:
+#         print('water is boiling')
+#     else:
+#         print('Water is about to boil')
+# elif unit == 'c':
+#     if temp >= 100:
+#         print('water is boiling')
+#     else:
+#         print('Water is about to boil')
+# elif unit == 'k':
+#     if temp >= 373:
+#         print('water is boiling')
+#     else:
+#         print('Water is about to boil')
+# else:
+#     print("Input error, unit unknown")
 
 
 # I would like to add a catch error for units and temperature
+
+weight = float(input("Please enter weight in kg: "))
+height = float(input("Please enter height in m: "))
+
+bmi = round(weight/(height*height))
+
+if bmi < 16:
+    print("Severely Underweight")
+elif 16 < bmi < 18.4:
+    print(f"With a bmi of {bmi} you are underweight. Join me for breakfast.")
+elif 18.5 < bmi < 24.9:
+    print(f"With a bmi of {bmi} you are normal. Congrats.")
+elif 25.0 < bmi < 29.9:
+    print(f"With a bmi of {bmi} you are overweight. Join me for a bike ride.")
+elif 30.0 < bmi < 34.9:
+    print(f"With a bmi of {bmi} you are morbidly obese. You may need to change lifestyle.")
+elif 35.0 < bmi < 39.9:
+    print(f"With a bmi of {bmi} you are severely obese.")
+elif bmi > 39.9:
+    print(f"With a bmi of {bmi} you are morbidly obese.")
+
 
 
 
