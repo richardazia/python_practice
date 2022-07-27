@@ -434,7 +434,20 @@
 
 ##########
 
-print("The 99 Bottles on the Wall song")
+# print("The 99 Bottles on the Wall song")
 
-for bottle in range(99, 0, -1):
-    print(f"{bottle} bottles of beer on the wall.\n{bottle} bottles of beer.\nTake one down, pass it around {bottle - 1}")
+# for bottle in range(99, 0, -1):
+#     print(f"{bottle} bottles of beer on the wall.\n{bottle} bottles of beer.\nTake one down, pass it around {bottle - 1} bottles of beer on the wall.")
+
+print("The While Loop version")
+
+total_bottles = 99
+while total_bottles > 0:
+    print(f"{total_bottles} bottles of beer on the wall.")
+    print(f"{total_bottles} bottles of beer.")
+    if total_bottles == 1:
+        print(f"Take one down, pass it around, no more bottles of beer on the wall.")
+    else:
+        print(f"take one down, pass it around, {total_bottles - 1} bottles of beer on the wall.")
+    print("*" * 40)
+    total_bottles -= 1
