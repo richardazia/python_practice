@@ -1,4 +1,6 @@
 
+# Based on One Week Python by Colt Steele on Udemy
+
 # print(1+2+3+4)
 # print("Go for a bike ride")
 
@@ -321,10 +323,10 @@
 
 # I would like to add a catch error for units and temperature
 
-weight = float(input("Please enter weight in kg: "))
-height = float(input("Please enter height in m: "))
+# weight = float(input("Please enter weight in kg: "))
+# height = float(input("Please enter height in m: "))
 
-bmi = round(weight/(height*height))
+# bmi = round(weight/(height*height))
 
 # if bmi < 16:
 #     print("Severely Underweight")
@@ -342,22 +344,97 @@ bmi = round(weight/(height*height))
 #     print(f"With a bmi of {bmi} you are morbidly obese.")
 
 # refactored
-if bmi < 16:
-    category = "Severely Underweight"
-elif 16 < bmi < 18.4:
-    category = "underweight. Join me for breakfast."
-elif 18.5 < bmi < 24.9:
-    category = "normal. Congrats."
-elif 25.0 < bmi < 29.9:
-    category = "overweight. Join me for a bike ride."
-elif 30.0 < bmi < 34.9:
-    category = "morbidly obese. You may need to change lifestyle."
-elif 35.0 < bmi < 39.9:
-    category = "severely obese."
-elif bmi > 39.9:
-    category = "morbidly obese."
+# if bmi < 16:
+#     category = "Severely Underweight"
+# elif 16 < bmi < 18.4:
+#     category = "underweight. Join me for breakfast."
+# elif 18.5 < bmi < 24.9:
+#     category = "normal. Congrats."
+# elif 25.0 < bmi < 29.9:
+#     category = "overweight. Join me for a bike ride."
+# elif 30.0 < bmi < 34.9:
+#     category = "morbidly obese. You may need to change lifestyle."
+# elif 35.0 < bmi < 39.9:
+#     category = "severely obese."
+# elif bmi > 39.9:
+#     category = "morbidly obese."
 
-print(f"Your bmi of {bmi} makes you {category}")
+# print(f"Your bmi of {bmi} makes you {category}")
 
+# day = input("What day of the week is it? ")
 
+# if day == 'saturday' or day == 'sunday':
+#     print("Time to do some sports with other people. ")
+# else:
+#     print("Time to spend a few hours a day studying")
 
+# age = int(input("How young are you? "))
+# if age < 5 or age >= 65:
+#     print("You get in for free")
+# else: 
+#     print("That will be 24 CHF.")
+########
+# year = input("What is your year of birth? ")
+
+# if not year.isnumeric():
+#     year = input("What is your year of birth? Please use a number: ")
+# year = int(year)
+
+# print(f"You were born in {2022-year} years ago")
+######
+# snack = input("Enter your favourite snack: ")
+# # if snack != "":
+# if snack:
+#     print(f"I also like {snack} as a snack.")
+
+# battery_percentage = 0
+# if battery_percentage: 
+#     print(f"{battery_percentage}% battery remaining")
+# else:
+#     print("Rechage the battery")
+
+##############
+
+# answer = input("Good morning ")
+
+# while answer != "Good morning":
+#     answer = input("Please say Good morning. ")
+
+# print("Good Morning to you too, once again")
+###############
+# Pattern 1
+# print("Welcome to the final countdown")
+# num = 0
+# while num <= 40:
+#     print(f"We are current at {num}. Just a little more to go")
+#     num += 1
+
+##########
+
+# count = 7
+# while count > 0:
+#     print("*" * count)
+#     count -= 1
+
+# count = 1
+# while count < 8:
+#     print("*" * count)
+#     count += 1
+
+##########
+
+# word = "supercalifragiexpialidocious"
+# for char in word:
+#     print(char)
+
+##########
+
+# for num in range(-10, 10, 2):
+#     print(num)
+
+##########
+
+print("The 99 Bottles on the Wall song")
+
+for bottle in range(99, 0, -1):
+    print(f"{bottle} bottles of beer on the wall.\n{bottle} bottles of beer.\nTake one down, pass it around {bottle - 1}")
