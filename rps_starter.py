@@ -30,7 +30,12 @@ num = randint(1,3)
 print(num)
 
 # Turn that random number into the computer's RPS move
-
+# if num == 1: 
+#     comp_move = "rock"
+# elif num == 2:
+#     comp_move = "paper"
+# elif num == 3: 
+#     comp_move = "scissors"
 
 # Ask a user to enter their move
 print("Choose between 1: rock, 2: paper, 3: scissors")
