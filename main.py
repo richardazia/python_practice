@@ -439,15 +439,65 @@
 # for bottle in range(99, 0, -1):
 #     print(f"{bottle} bottles of beer on the wall.\n{bottle} bottles of beer.\nTake one down, pass it around {bottle - 1} bottles of beer on the wall.")
 
-print("The While Loop version")
+# print("The While Loop version")
 
-total_bottles = 99
-while total_bottles > 0:
-    print(f"{total_bottles} bottles of beer on the wall.")
-    print(f"{total_bottles} bottles of beer.")
-    if total_bottles == 1:
-        print(f"Take one down, pass it around, no more bottles of beer on the wall.")
-    else:
-        print(f"take one down, pass it around, {total_bottles - 1} bottles of beer on the wall.")
-    print("*" * 40)
-    total_bottles -= 1
+# total_bottles = 99
+# while total_bottles > 0:
+#     print(f"{total_bottles} bottles of beer on the wall.")
+#     print(f"{total_bottles} bottles of beer.")
+#     if total_bottles == 1:
+#         print(f"Take one down, pass it around, no more bottles of beer on the wall.")
+#     else:
+#         print(f"take one down, pass it around, {total_bottles - 1} bottles of beer on the wall.")
+#     print("*" * 40)
+#     total_bottles -= 1
+
+# for char in "bacon":
+#     if char == "c":
+#         break
+#     print(char)
+#################
+# print("program exit code 0")
+
+# for char in "struddel":
+#     if char == "e":
+#         break
+#     print(char)
+# print("Lunch is ready")
+
+# message = input("Say Ecki Ecki eck ")
+# while True: 
+#     if message == "Ecki Ecki eck":
+#         break
+#     message = input("say that phrase: ")
+
+# print("That phrase is nonsense isn't it? :-)")
+
+# for char in "catnip":
+#     if char == "i":
+#         continue
+#     print(char)
+# print("Loop completed")
+
+# for letter in "supercalifragilistiexpialidocious":
+#     if letter in "aeiou":
+#         continue
+#     print(letter)
+######
+####################
+import datetime
+
+e = datetime.datetime.now()
+
+print ("Today is the %sth of %s %s" % (e.day, e.month, e.year))
+
+Debug.writeline(Format(Now, "dd MMMM yyyy"))
+
+# print ("Current date and time = %s" % e)
+
+# print ("Today's date:  = %s/%s/%s" % (e.day, e.month, e.year))
+
+# print ("The time is now: = %s:%s:%s" % (e.hour, e.minute, e.second))
+
+# print(f"Today is the %a, %d, ")
+####################
