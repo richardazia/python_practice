@@ -127,3 +127,13 @@ bmi = round(bmi, 2) where bmi is the float and 2 is the number of decimal places
 ### isnumeric
 - return true if the string is a numeric string, false if not
 - a string is numeric if all characters in the string are numbers
+
+## Break
+works in a similar way to JS and other languages
+
+## Continue
+skips a letter, character or item 
+
+## Nested loops
+If we run an outer loop with an innter loop then the outer loop will go through one loop, and the inner loop will go through all items, and then it will jump to item 2 of the inner loop, and then all items of the inner looop. 
+
