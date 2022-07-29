@@ -115,4 +115,15 @@ https://docs.python.org/3/library/functions.html#ord
 ### elif
 elif is like - else if in other languages but it short circuits as soon as one condition is true
 
+### Nested conditionals
+- Conditions can be nested
+- if condition a is true, look at condition b, if be is true look at c...
+- if a is false then nothing runs
 
+### Rounding floats
+bmi = round(bmi, 2) where bmi is the float and 2 is the number of decimal places.
+
+
+### isnumeric
+- return true if the string is a numeric string, false if not
+- a string is numeric if all characters in the string are numbers
