@@ -491,8 +491,6 @@ e = datetime.datetime.now()
 
 print ("Today is the %sth of %s %s" % (e.day, e.month, e.year))
 
-Debug.writeline(Format(Now, "dd MMMM yyyy"))
-
 # print ("Current date and time = %s" % e)
 
 # print ("Today's date:  = %s/%s/%s" % (e.day, e.month, e.year))
@@ -501,3 +499,4 @@ Debug.writeline(Format(Now, "dd MMMM yyyy"))
 
 # print(f"Today is the %a, %d, ")
 ####################
+
