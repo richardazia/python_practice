@@ -137,3 +137,5 @@ skips a letter, character or item
 ## Nested loops
 If we run an outer loop with an innter loop then the outer loop will go through one loop, and the inner loop will go through all items, and then it will jump to item 2 of the inner loop, and then all items of the inner looop. 
 
+## Functions
+- use def to define them They have a name, and then the action that they're meant to carry out. 

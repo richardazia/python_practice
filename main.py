@@ -500,3 +500,7 @@ print ("Today is the %sth of %s %s" % (e.day, e.month, e.year))
 # print(f"Today is the %a, %d, ")
 ####################
 
+def pandemic():
+    print("Rumours that the pandemic is over have been greatly exagerated " * 20)
+
+pandemic()
