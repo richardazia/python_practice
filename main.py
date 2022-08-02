@@ -485,11 +485,11 @@
 #     print(letter)
 ######
 ####################
-import datetime
+# import datetime
 
-e = datetime.datetime.now()
+# e = datetime.datetime.now()
 
-print ("Today is the %sth of %s %s" % (e.day, e.month, e.year))
+# print ("Today is the %sth of %s %s" % (e.day, e.month, e.year))
 
 # print ("Current date and time = %s" % e)
 
@@ -500,7 +500,66 @@ print ("Today is the %sth of %s %s" % (e.day, e.month, e.year))
 # print(f"Today is the %a, %d, ")
 ####################
 
-def pandemic():
-    print("Rumours that the pandemic is over have been greatly exagerated " * 20)
+# def pandemic():
+#     print("Rumours that the pandemic is over have been greatly exagerated " * 20)
 
-pandemic()
+# pandemic()
+
+# def laugh(intensity):
+#     print("Ha! " * intensity)
+
+# laugh(12)
+# laugh(6)
+# laugh(8)
+
+######################
+
+# word = "chicken"
+
+# print(word)
+# print(word.replace("ck", "ldr"))
+
+# def multiply(a,b):
+    # print(a*b)
+
+# def multiply(a,b):
+#     return(a*b)
+
+# multiply(12,56.12)
+# multiply(15,15)
+# multiply(12,12)
+
+# def divide(a, b):
+#     if a == 0 or b == 0:
+#         return "Cannot divide by zero!"
+#     return a/b
+
+# divide(12,0)
+# divide(0,12)
+# divide(12,12)
+
+# def is_even(number):
+#     if number % 2 == 0:
+#         return True    
+#     return False
+
+# def is_even(number):
+#     return number % 2 == 0
+
+######################
+
+# print("*" * 20)
+# print("For all your Slug needs, Slugify")
+# print("*" * 20)
+
+# def slugify(phrase):
+#     return phrase.strip().lower().replace(" ", "-")
+
+print("The Vowel counter")
+def vowel_counter(count_vowels):
+    for letter in count_vowels:
+        vowel_count = int(0)
+        if letter in "aeiou":
+            vowel_count += 1
+            return vowel_count
+    
