@@ -561,5 +561,6 @@ def vowel_counter(count_vowels):
         vowel_count = int(0)
         if letter in "aeiou":
             vowel_count += 1
-            return vowel_count
-    
+            print(vowel_count)
+
+vowel_counter("The quick brown fox")
