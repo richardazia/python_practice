@@ -627,11 +627,11 @@
 
 # Local Scope
 
-def bike():
-    wheels = "Continental GP2 4000"
-    spec = 700
-    print(f"Inside the function: {wheels} with spec: {spec}")
-bike()
+# def bike():
+#     wheels = "Continental GP2 4000"
+#     spec = 700
+#     print(f"Inside the function: {wheels} with spec: {spec}")
+# bike()
 
 # Outside of local scope
 # print(f"outside the function: {wheels} with spec: {spec}")
@@ -647,3 +647,47 @@ bike()
 
 # print("After conditional", mammal)
 # print(f"Char is currently set to {char}")
+
+# def outer():
+#     fish = "cuttlefish"
+#     def inner():
+#         print("Inner:", fish)
+#         def inner_inner():
+#             print("Inside the inner inner:", fish)
+#             def in_the_middle():
+#                 print("And now even deeper: ", fish)
+#             in_the_middle()
+#         inner_inner()
+#     inner()
+
+# outer()
+
+####################
+# Priority of scope
+
+# fish = "sea urchin"
+
+# def outer():
+#     fish = "swordfish"
+#     print(fish)
+# outer()
+
+####################
+# Global scope
+# Despite being declared within the function it is made available globally. 
+
+def outer():
+    global animal
+    animal = "wolf"
+outer()
+
+print(animal)
+
+psi = 92
+
+def burst_tyre():
+    global psi # we make psi global so that we can modify it within the function. 
+    psi = psi * 2
+
+burst_tyre()
+print(psi)
