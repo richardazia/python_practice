@@ -143,3 +143,21 @@ If we run an outer loop with an innter loop then the outer loop will go through 
 ## return
 - return returns what it is expected to return but after this the function stops. 
 - code after a return will not run. 
+
+## Defaut Parameters
+- We can add defaults to parameters. 
+
+def bounce(frequency=18):
+    print("boing! " * frequency)
+
+if we write bounce(252) then the frequency will be 252. Boing will be printed 252 times. If we leave "boing()", blank, then it will default to 18 boings. 
+
+## Parameter Order
+- When writing parameters the default must be second, not first. 
+- def aeration(method, action="slam"):
+
+# Scope in Python
+- lexical or local - available only within a function.
+- enclosing 
+- global - available everywhere
+- built-in

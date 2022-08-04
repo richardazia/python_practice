@@ -554,13 +554,96 @@
 
 # def slugify(phrase):
 #     return phrase.strip().lower().replace(" ", "-")
+# vowel_count = int(0)
+# print("The Vowel counter")
+# def vowel_counter(count_vowels):
+#     vowel_count = int(0)
+#     for char in count_vowels:
+#         if char in "aeiou":
+#             vowel_count += 1
+#     return(vowel_count)
 
-print("The Vowel counter")
-def vowel_counter(count_vowels):
-    for letter in count_vowels:
-        vowel_count = int(0)
-        if letter in "aeiou":
-            vowel_count += 1
-            print(vowel_count)
+# print(vowel_counter("The quick brown fox"))
 
-vowel_counter("The quick brown fox")
+# # Course solution
+
+# def count_vowels(word):
+#     count = 0
+#     for char in word:
+#         if char in "aeiou":
+#             count += 1
+#     return count
+
+# print(count_vowels("The quick brown fox"))
+
+# msg = "       Please reboot your computer now!.."
+
+# msg.strip()
+
+# msg.strip(".")
+
+# msg.strip().strip(".")
+
+# # We can chain them another way. 
+
+# print(msg.strip(". "))
+
+# def bounce(frequency=18):
+#     print("boing! " * frequency)
+
+# print("Three times\n\n")
+# bounce(3)
+# print("default\n\n")
+# bounce()
+# print("print boing 252 times\n\n")
+# bounce(252)
+
+# #Slugify Revisited
+
+# def slugify(post_title, seperator="-"):
+#     return post_title.lower().strip().replace(" ", seperator)
+
+# print(slugify("The happy Goose Jumped over the harmonica playing chicken", "_"))
+
+# def aeration(method, action="slam"):
+#     print(f"Please {action} the {method}.")
+
+# aeration("open", "window")
+# aeration("wear", "mask")
+# aeration("close", "door")
+# aeration("window")
+
+# def calc_total(price, qty=1, tax=0.05, discount=0):
+#     subtotal = price * qty * (1-discount)
+#     print(subtotal * (1 + tax))
+
+# calc_total(25)
+
+# calc_total(43, 2, 0.25, 0.05)
+
+# # Being specific - we can pass the data in as: 
+
+# calc_total(price=23.68, qty=17, tax=0.30)
+
+# Local Scope
+
+def bike():
+    wheels = "Continental GP2 4000"
+    spec = 700
+    print(f"Inside the function: {wheels} with spec: {spec}")
+bike()
+
+# Outside of local scope
+# print(f"outside the function: {wheels} with spec: {spec}")
+
+# for char in "duck":
+#     colour = "green"
+#     print(char)
+
+# print("After the loop", colour)
+
+# if True:
+#     mammal = "cat"
+
+# print("After conditional", mammal)
+# print(f"Char is currently set to {char}")
