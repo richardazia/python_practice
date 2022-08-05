@@ -158,6 +158,30 @@ if we write bounce(252) then the frequency will be 252. Boing will be printed 25
 
 # Scope in Python
 - lexical or local - available only within a function.
-- enclosing 
-- global - available everywhere
-- built-in
+- enclosing - nested 'inner' functions have access to variables declared in outer parents
+- global - available everywhere - use word global
+- built-in - str and other built-in functionality that are accessible by default. 
+
+# Lists
+- ordered collections of values. 
+
+## List index
+- lists are 0 indexed so that we can work with individual items.
+
+## List Append and extend
+- Append adds elements to a list in their entirety
+- extend adds elements item by item. 
+
+## List insert
+- We can insert an item in a specific position
+- use insert(index, item to be inserted)
+- it shifts items, rather than replaces them - languages.insert(4, 'PHP')
+
+## List Slice
+
+list[from:to:increment]
+
+## List item deletion
+- .clear clears all items
+- .remove removes the first item in a list
+- .pop removes the final element in a list and makes it available.It can be used to delete slices. 

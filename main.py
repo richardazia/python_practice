@@ -676,18 +676,111 @@
 # Global scope
 # Despite being declared within the function it is made available globally. 
 
-def outer():
-    global animal
-    animal = "wolf"
-outer()
+# def outer():
+#     global animal
+#     animal = "wolf"
+# outer()
 
-print(animal)
+# print(animal)
 
-psi = 92
+# psi = 92
 
-def burst_tyre():
-    global psi # we make psi global so that we can modify it within the function. 
-    psi = psi * 2
+# def burst_tyre():
+#     global psi # we make psi global so that we can modify it within the function. 
+#     psi = psi * 2
 
-burst_tyre()
-print(psi)
+# burst_tyre()
+# print(psi)
+
+###############
+# Experimenting with lists
+
+distractions = ['recycling', 'hoovering', 'cooking', 'laundry', 'dinner', 'lunch']
+
+hello = ['h', 'e', 'l', 'l', 'o']
+
+range = list(range(2,24, 2)) #range works like in Ruby, if we add a third number it increments by that number
+print(range)
+
+languages = ['Ruby', 'JavaScript', 'Cobol', 'Pascal', 'QBasic']
+
+print(languages[3])
+
+print(languages[1])
+
+print(languages[1], [2], [3]) # will pass item [1] but not the others. 
+print(languages)
+print(languages[-1])
+
+# languages[12] = "Rust" # will not be allowed. "IndexError: list assignment index out of range"
+
+languages.append(range)
+# languages.append[8] # Gives an errror message as it thinks it is asked to fetch, not put data. 
+languages.append('Fortran')
+
+print(languages)
+
+languages.extend("bacon")
+
+print(languages)
+
+web_dev = ['html', 'css', 'xhtml']
+
+languages.extend(web_dev)
+languages.append(web_dev)
+print(languages)
+
+print(len(languages))
+
+languages.insert(4, 'PHP')
+
+print(languages)
+
+print(languages[0:5])
+print(languages[0:5:3]) #Now we only get every third item
+print(languages[:5]) # From the start
+print(languages[5:]) # To the end
+print(languages[::3])
+
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+
+letters[3:5] = [9,8,7,6,5]
+
+print(letters)
+###############
+
+harmonica = ['MarineBand', 'special20', 'silverstar']
+print(harmonica)
+harmonica.clear()
+
+print(harmonica)
+
+ip = [192, 168, 0, 1]
+
+ip.remove(1) # removes the first instance it finds. 
+
+print(ip)
+
+print(ip.pop())
+print(ip.pop())
+print(ip)
+print(ip.pop(0))
+print(ip)
+
+ip = [192, 168, 0, 1]
+
+del ip[0]
+
+print(ip)
+
+emails = ['me@example.com', 'notme@example.com', 'yetanotherone@example.com', 'thequickbrownfox@example.com', 'thelemming@example.com']
+i = 0
+for email in emails:
+    print(f"Email sent to {email}")
+
+print(emails)
+
+while i < len(emails):
+    print(f"Email sent to {email}")
+    i += 1
+    
