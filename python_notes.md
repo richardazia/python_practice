@@ -184,4 +184,4 @@ list[from:to:increment]
 ## List item deletion
 - .clear clears all items
 - .remove removes the first item in a list
-- .pop removes the final element in a list and makes it available.It can be used to delete slices. 
+- .pop removes the final element in a list and makes it available. It can be used to delete slices. 

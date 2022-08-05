@@ -781,6 +781,7 @@ for email in emails:
 print(emails)
 
 while i < len(emails):
-    print(f"Email sent to {email}")
+    # print(f"Email sent to {email}")
+    print("e-mail sent to: " + emails[i] + " We will notify you when a response is read receipt is recieved.")
     i += 1
     
