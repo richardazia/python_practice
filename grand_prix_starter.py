@@ -21,14 +21,20 @@ print(drivers)
 
 # Oh dear, there's a huge crash at the front! Remove the first element from the driver's list
 drivers.remove("Charles")
+# drivers.pop(0) # Solution 2
 print(drivers)
 
 
 # And again the leader of the pack runs into trouble! He's not out of the race, but he's now moved to last place.  Remove the first driver in the list, store it in variable, and then add it to the end of the list.
-last = drivers[0]
-del drivers[0]
-print(last)
-drivers.append(last)
+# last = drivers[0]
+# del drivers[0]
+# print(last)
+# drivers.append(last)
+# print(drivers)
+
+# Course solution
+leader = drivers.pop(0)
+drivers.append(leader)
 print(drivers)
 
 
@@ -38,10 +44,10 @@ print(drivers)
 
 # My dog, Elton, is making a remarkable charge up the leadboard! Remove Elton from his current position in the list and insert him at index 2.
 drivers.remove("Elton")
-drivers.insert(1, "Elton")
+drivers.insert(2, "Elton")
 print(drivers)
 # The race is over! It's time for the podium ceremony.  Create a new list called podium that contains the first 3 elements from the drivers list. (use a slice!)
-podium = drivers[0:3]
+podium = drivers[:3]
 print(podium)
 
 
@@ -54,6 +60,11 @@ print(podium)
 # 6. Esteban
 # 7. Pierre
 
+print("My solution")
 for driver in drivers:
     print(f"{i}. {driver}")
     i += 1
+
+print("Course solution")
+for num in range(len(drivers)):
+    print(f"{num + 1}. {drivers[num]}")
