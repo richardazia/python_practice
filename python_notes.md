@@ -109,6 +109,9 @@ Out[27]: 97
 In [28]: ord('1')
 Out[28]: 49
 
+### String methods - split and join
+- split is used to split a string where required
+
 #### ord numbers
 https://docs.python.org/3/library/functions.html#ord
 
@@ -185,3 +188,29 @@ list[from:to:increment]
 - .clear clears all items
 - .remove removes the first item in a list
 - .pop removes the final element in a list and makes it available. It can be used to delete slices. 
+
+# Nested lists
+- you can access items using the name of the list followed by the coordinates of the data you want, down to the character if desired. 
+
+# Logical Operators
+- They allow you to add data from one list to a second. For example:
+- It works with strings and integers etc. 
+[1,2,3]+[4,5,6]
+- when using 'in' it checks for the entire string, not specific characters or words. 
+
+# Sort, count and reverse
+- We can sort elements in the order we want
+- We can count how often a string or item occurs. 
+- we can reverse the order of the data. 
+- capital letters are sorted before small letters
+
+# ID
+- each object has a unique id. 
+
+# == and is
+- == compares the content of two lists
+- 'is' compares the id of two lists
+
+# Deep copies
+- deep copies allow us to make an independent item from a previous item. It will duplicate all the content. It can then be modified without affecting the original. 
+
