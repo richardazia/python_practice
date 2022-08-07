@@ -816,34 +816,147 @@
 #         print(f"Room booked for {specific}. Please check e-mail for confirmation")
 ############################
 #Playing with List Operators
-print([1,2,3]+[4,5,6])
-print(['the', 'strict', 'goose'] + ['told', 'us', 'off'])
-evens = [10,12,14,16,18,20]
-odds = [11,13,15,17,19]
-print(odds + evens)
-print(evens + odds)
+# print([1,2,3]+[4,5,6])
+# print(['the', 'strict', 'goose'] + ['told', 'us', 'off'])
+# evens = [10,12,14,16,18,20]
+# odds = [11,13,15,17,19]
+# print(odds + evens)
+# print(evens + odds)
 
-print([3,6,9] * 3)
+# print([3,6,9] * 3)
 
-# print(odds * evens) # TypeError: can't multiply sequence by non-int of type 'list'
+# # print(odds * evens) # TypeError: can't multiply sequence by non-int of type 'list'
 
-print("rine" in "marineband")
+# print("rine" in "marineband")
 
-print(10 in evens)
-print(11 in evens)
-print(1 in odds and 1 in evens)
-print(1 in odds)
-print(1 in evens)
+# print(10 in evens)
+# print(11 in evens)
+# print(1 in odds and 1 in evens)
+# print(1 in odds)
+# print(1 in evens)
 ############################
 
-ice_cream = ['absinthe', 'pistache', 'mint', 'cassis', 'nutella', 'fried chicken']
+# ice_cream = ['absinthe', 'pistache', 'mint', 'cassis', 'nutella', 'fried chicken']
 
-selection = input("What ice cream flavour do you desire?")
+# selection = input("What ice cream flavour do you desire?")
 
-while selection.lower() not in ice_cream:
-    selection = input(f"We don't have {selection}, please choose another: ")
+# while selection.lower() not in ice_cream:
+#     selection = input(f"We don't have {selection}, please choose another: ")
 
-print(f"Fantastic, we have {selection} ice cream. We will bring it shortly. ")
+# print(f"Fantastic, we have {selection} ice cream. We will bring it shortly. ")
 
-print("absinthe" in ice_cream)
-print("fried" in ice_cream)
+# print("absinthe" in ice_cream)
+# print("fried" in ice_cream)
+################################
+# from unicodedata import digit
+
+
+# numbers = [3,4,3,4,4,3,2,1,0,4,3,2,7,9]
+
+# print(numbers.count(2))
+# print(numbers.count(4))
+# print(numbers.count(1))
+# print(numbers.count(7))
+
+# print(numbers.reverse()) #returns None 
+# print(numbers)
+
+# icao = ['alpha', 'hotel', 'whiskey', 'tango', 'echo', 'golf', 'juliet', 'x-ray', 'bravo' ]
+# chaos_number = [-23, -65, 3, 5, 87, 12, 66, 34, 24, 89, 65, 43, 42, 12, 1 ,0, 2, 76]
+# print(icao.sort()) # returns None
+# print("Sort")
+# print(icao)
+# icao.sort(reverse=True)
+# print("Reverse")
+# print(icao)
+# chaos_number.sort()
+# print(chaos_number)
+# chaos_number.sort(reverse=True)
+# print(chaos_number)
+
+# ################################
+# # Using id:
+# bird = ['duck']
+
+# print(id(bird))
+
+# digits = [1,2,3,4]
+
+# digits_2 = digits
+
+# print(id(digits))
+# print(id(digits_2))
+
+# digits_2.append(5)
+# print(digits)
+# print(id(digits))
+
+################################
+print("Using ==")
+print(['a', 'b', 'c'] ==  ['a', 'b', 'c'])
+print(['a', 'b', 'c'] ==  ['a', 'b', 'c', 1, 2, 3])
+
+print("Using 'is'")
+print(['a', 'b', 'c'] is  ['a', 'b', 'c'])
+print(['a', 'b', 'c'] is  ['a', 'b', 'c', 1, 2, 3])
+
+# Split
+
+date = "07/08/2022"
+print(date.split("/"))
+
+lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dignissim tortor nec ligula molestie, non lobortis risus luctus. In eu."
+
+print(lorem.split(" "))
+
+# Join
+
+letters = ["M", "A", "S", "H"]
+print("Before: ")
+print(letters)
+print("*".join(letters))
+print("After being joined")
+print(letters)
+print("/|\\".join(letters))
+
+print("!".join("The key is sticking when I type."))
+
+# Unpacking
+
+colour = [162, 220, 32]
+red, green, blue = colour
+print(red)
+print(green)
+print(blue)
+
+triathlon_results = ['Durussel Raymond', 'Buchner Benjamin', 'Di Naro Sadri', 'Ryan Angela', 'Dominique Pierre']
+# data source: https://www.datasport.com/live/monitor/?lang=EN&racenr=24505 at around 10:55, results are not final. 
+gold, silver, bronze, *competitors = triathlon_results
+print(gold)
+print(silver)
+print(bronze)
+print(*competitors)
+
+# For a shallow copy
+
+triathlon_results_2 = triathlon_results.copy()
+print(id(triathlon_results))
+print(id(triathlon_results_2))
+
+print(triathlon_results_2 is triathlon_results) #False
+
+print(triathlon_results == triathlon_results_2) ## True
+
+# Shallow copy option two = slice [:]
+print(triathlon_results_2)
+
+print(triathlon_results_2[0:3])
+print(id(triathlon_results_2[:]))
+
+# Deep copy
+import copy
+
+item = [3,2,3[497],1,2,3,2,1,[213]]
+item2 = copy.deepcopy(item)
+
+print(item2)
