@@ -695,93 +695,155 @@
 ###############
 # Experimenting with lists
 
-distractions = ['recycling', 'hoovering', 'cooking', 'laundry', 'dinner', 'lunch']
+# distractions = ['recycling', 'hoovering', 'cooking', 'laundry', 'dinner', 'lunch']
 
-hello = ['h', 'e', 'l', 'l', 'o']
+# hello = ['h', 'e', 'l', 'l', 'o']
 
-range = list(range(2,24, 2)) #range works like in Ruby, if we add a third number it increments by that number
-print(range)
+# range = list(range(2,24, 2)) #range works like in Ruby, if we add a third number it increments by that number
+# print(range)
 
-languages = ['Ruby', 'JavaScript', 'Cobol', 'Pascal', 'QBasic']
+# languages = ['Ruby', 'JavaScript', 'Cobol', 'Pascal', 'QBasic']
 
-print(languages[3])
+# print(languages[3])
 
-print(languages[1])
+# print(languages[1])
 
-print(languages[1], [2], [3]) # will pass item [1] but not the others. 
-print(languages)
-print(languages[-1])
+# print(languages[1], [2], [3]) # will pass item [1] but not the others. 
+# print(languages)
+# print(languages[-1])
 
-# languages[12] = "Rust" # will not be allowed. "IndexError: list assignment index out of range"
+# # languages[12] = "Rust" # will not be allowed. "IndexError: list assignment index out of range"
 
-languages.append(range)
-# languages.append[8] # Gives an errror message as it thinks it is asked to fetch, not put data. 
-languages.append('Fortran')
+# languages.append(range)
+# # languages.append[8] # Gives an errror message as it thinks it is asked to fetch, not put data. 
+# languages.append('Fortran')
 
-print(languages)
+# print(languages)
 
-languages.extend("bacon")
+# languages.extend("bacon")
 
-print(languages)
+# print(languages)
 
-web_dev = ['html', 'css', 'xhtml']
+# web_dev = ['html', 'css', 'xhtml']
 
-languages.extend(web_dev)
-languages.append(web_dev)
-print(languages)
+# languages.extend(web_dev)
+# languages.append(web_dev)
+# print(languages)
 
-print(len(languages))
+# print(len(languages))
 
-languages.insert(4, 'PHP')
+# languages.insert(4, 'PHP')
 
-print(languages)
+# print(languages)
 
-print(languages[0:5])
-print(languages[0:5:3]) #Now we only get every third item
-print(languages[:5]) # From the start
-print(languages[5:]) # To the end
-print(languages[::3])
+# print(languages[0:5])
+# print(languages[0:5:3]) #Now we only get every third item
+# print(languages[:5]) # From the start
+# print(languages[5:]) # To the end
+# print(languages[::3])
 
-letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+# letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 
-letters[3:5] = [9,8,7,6,5]
+# letters[3:5] = [9,8,7,6,5]
 
-print(letters)
-###############
+# print(letters)
+# ###############
 
-harmonica = ['MarineBand', 'special20', 'silverstar']
-print(harmonica)
-harmonica.clear()
+# harmonica = ['MarineBand', 'special20', 'silverstar']
+# print(harmonica)
+# harmonica.clear()
 
-print(harmonica)
+# print(harmonica)
 
-ip = [192, 168, 0, 1]
+# ip = [192, 168, 0, 1]
 
-ip.remove(1) # removes the first instance it finds. 
+# ip.remove(1) # removes the first instance it finds. 
 
-print(ip)
+# print(ip)
 
-print(ip.pop())
-print(ip.pop())
-print(ip)
-print(ip.pop(0))
-print(ip)
+# print(ip.pop())
+# print(ip.pop())
+# print(ip)
+# print(ip.pop(0))
+# print(ip)
 
-ip = [192, 168, 0, 1]
+# ip = [192, 168, 0, 1]
 
-del ip[0]
+# del ip[0]
 
-print(ip)
+# print(ip)
 
-emails = ['me@example.com', 'notme@example.com', 'yetanotherone@example.com', 'thequickbrownfox@example.com', 'thelemming@example.com']
-i = 0
-for email in emails:
-    print(f"Email sent to {email}")
+# emails = ['me@example.com', 'notme@example.com', 'yetanotherone@example.com', 'thequickbrownfox@example.com', 'thelemming@example.com']
+# i = 0
+# for email in emails:
+#     print(f"Email sent to {email}")
 
-print(emails)
+# print(emails)
 
-while i < len(emails):
-    # print(f"Email sent to {email}")
-    print("e-mail sent to: " + emails[i] + " We will notify you when a response is read receipt is recieved.")
-    i += 1
-    
+# while i < len(emails):
+#     # print(f"Email sent to {email}")
+#     print("e-mail sent to: " + emails[i] + " We will notify you when a response is read receipt is recieved.")
+#     i += 1
+##############
+# Nested lists
+
+# inception = [1,2,3,4, ['nested', 'within']]
+
+# print(inception[4])
+# print(inception[4][0])
+# print(inception[4][1])
+
+# meetings = [
+#     ['monday', 'morning'],
+#     ['wednesday', 'afternoon'],
+#     ['friday', 'evening'],
+#     ['saturday', 'full day'],
+#     ['sunday', 'morning']
+# ]
+
+# print(meetings)
+
+# print(len(meetings))
+
+# print(meetings[1][0])
+# print(meetings[1][1][2])
+
+# print(meetings[3])
+
+# for meeting in meetings:
+#     print(meeting)
+#     for specific in meeting:
+#         print(f"Room booked for {specific}. Please check e-mail for confirmation")
+############################
+#Playing with List Operators
+print([1,2,3]+[4,5,6])
+print(['the', 'strict', 'goose'] + ['told', 'us', 'off'])
+evens = [10,12,14,16,18,20]
+odds = [11,13,15,17,19]
+print(odds + evens)
+print(evens + odds)
+
+print([3,6,9] * 3)
+
+# print(odds * evens) # TypeError: can't multiply sequence by non-int of type 'list'
+
+print("rine" in "marineband")
+
+print(10 in evens)
+print(11 in evens)
+print(1 in odds and 1 in evens)
+print(1 in odds)
+print(1 in evens)
+############################
+
+ice_cream = ['absinthe', 'pistache', 'mint', 'cassis', 'nutella', 'fried chicken']
+
+selection = input("What ice cream flavour do you desire?")
+
+while selection.lower() not in ice_cream:
+    selection = input(f"We don't have {selection}, please choose another: ")
+
+print(f"Fantastic, we have {selection} ice cream. We will bring it shortly. ")
+
+print("absinthe" in ice_cream)
+print("fried" in ice_cream)
