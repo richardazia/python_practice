@@ -214,3 +214,11 @@ list[from:to:increment]
 # Deep copies
 - deep copies allow us to make an independent item from a previous item. It will duplicate all the content. It can then be modified without affecting the original. 
 
+# Dictionaries
+- {} tells python that this will be a dictionary. 
+- type({}) >> dict
+- dict() = {} like list() = []
+- uses key value pairs
+- key: value
+- dict.get() keyword
+
