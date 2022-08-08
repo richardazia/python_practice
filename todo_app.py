@@ -1,3 +1,4 @@
+f = open("tasks.txt", "a")
 # Todo List Exercise
 
 # Create an interactive, text-based todo list that has the following features:
@@ -38,13 +39,14 @@ while True:
     print("Enter a command. Type 'h' for help:")
     command = input("> ")
     if command == "q" or command == "quit":
+        f.close()
         break
     elif command == "h" or command == "help":
         print("*" * 35)
         print("Command options: ")
         print("Simply type in your task and press enter.")
         print("To delete a task just type the task number and enter.")
-        print("To exit the app press 'q' and enter.")
+        print("To exit the app press 'q' or type 'quit' and enter.")
         print("*" * 35)
     elif command.isnumeric():
         i = int(command) -1
@@ -56,6 +58,7 @@ while True:
             finished.append(completed_task)
     else: 
         todos.append(command)
+        f.write(command + "\n")
 
 print("Tata For Now!")
 print(f"We completed {len(finished)} tasks today: ")
