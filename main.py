@@ -892,71 +892,100 @@
 # print(id(digits))
 
 ################################
-print("Using ==")
-print(['a', 'b', 'c'] ==  ['a', 'b', 'c'])
-print(['a', 'b', 'c'] ==  ['a', 'b', 'c', 1, 2, 3])
+# print("Using ==")
+# print(['a', 'b', 'c'] ==  ['a', 'b', 'c'])
+# print(['a', 'b', 'c'] ==  ['a', 'b', 'c', 1, 2, 3])
 
-print("Using 'is'")
-print(['a', 'b', 'c'] is  ['a', 'b', 'c'])
-print(['a', 'b', 'c'] is  ['a', 'b', 'c', 1, 2, 3])
+# print("Using 'is'")
+# print(['a', 'b', 'c'] is  ['a', 'b', 'c'])
+# print(['a', 'b', 'c'] is  ['a', 'b', 'c', 1, 2, 3])
 
-# Split
+# # Split
 
-date = "07/08/2022"
-print(date.split("/"))
+# date = "07/08/2022"
+# print(date.split("/"))
 
-lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dignissim tortor nec ligula molestie, non lobortis risus luctus. In eu."
+# lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dignissim tortor nec ligula molestie, non lobortis risus luctus. In eu."
 
-print(lorem.split(" "))
+# print(lorem.split(" "))
 
-# Join
+# # Join
 
-letters = ["M", "A", "S", "H"]
-print("Before: ")
-print(letters)
-print("*".join(letters))
-print("After being joined")
-print(letters)
-print("/|\\".join(letters))
+# letters = ["M", "A", "S", "H"]
+# print("Before: ")
+# print(letters)
+# print("*".join(letters))
+# print("After being joined")
+# print(letters)
+# print("/|\\".join(letters))
 
-print("!".join("The key is sticking when I type."))
+# print("!".join("The key is sticking when I type."))
 
-# Unpacking
+# # Unpacking
 
-colour = [162, 220, 32]
-red, green, blue = colour
-print(red)
-print(green)
-print(blue)
+# colour = [162, 220, 32]
+# red, green, blue = colour
+# print(red)
+# print(green)
+# print(blue)
 
-triathlon_results = ['Durussel Raymond', 'Buchner Benjamin', 'Di Naro Sadri', 'Ryan Angela', 'Dominique Pierre']
-# data source: https://www.datasport.com/live/monitor/?lang=EN&racenr=24505 at around 10:55, results are not final. 
-gold, silver, bronze, *competitors = triathlon_results
-print(gold)
-print(silver)
-print(bronze)
-print(*competitors)
+# triathlon_results = ['Durussel Raymond', 'Buchner Benjamin', 'Di Naro Sadri', 'Ryan Angela', 'Dominique Pierre']
+# # data source: https://www.datasport.com/live/monitor/?lang=EN&racenr=24505 at around 10:55, results are not final. 
+# gold, silver, bronze, *competitors = triathlon_results
+# print(gold)
+# print(silver)
+# print(bronze)
+# print(*competitors)
 
-# For a shallow copy
+# # For a shallow copy
 
-triathlon_results_2 = triathlon_results.copy()
-print(id(triathlon_results))
-print(id(triathlon_results_2))
+# triathlon_results_2 = triathlon_results.copy()
+# print(id(triathlon_results))
+# print(id(triathlon_results_2))
 
-print(triathlon_results_2 is triathlon_results) #False
+# print(triathlon_results_2 is triathlon_results) #False
 
-print(triathlon_results == triathlon_results_2) ## True
+# print(triathlon_results == triathlon_results_2) ## True
 
-# Shallow copy option two = slice [:]
-print(triathlon_results_2)
+# # Shallow copy option two = slice [:]
+# print(triathlon_results_2)
 
-print(triathlon_results_2[0:3])
-print(id(triathlon_results_2[:]))
+# print(triathlon_results_2[0:3])
+# print(id(triathlon_results_2[:]))
 
-# Deep copy
-import copy
+# # Deep copy
+# import copy
 
-item = [3,2,3[497],1,2,3,2,1,[213]]
-item2 = copy.deepcopy(item)
+# item = [3,2,3[497],1,2,3,2,1,[213]]
+# item2 = copy.deepcopy(item)
 
-print(item2)
+# print(item2)
+#############################
+
+harmonica = {"brand": "Hohner", "model": "MarineBand", "key": "Key of C"}
+harmonica['portability'] = True
+print(harmonica)
+print(harmonica['brand'])
+print(harmonica['model'])
+
+prices = {
+    "chicken": 18.60,
+    "beef": 10.80,
+    "small peppers": 0.03,
+    "mentos": 1.20,
+    "redbull": 3.60
+}
+
+# scanned_item = input("Please scan item: ")
+# if scanned_item in prices:
+#     price = prices[scanned_item]
+#     print(f"{scanned_item}: {price} CHF")
+# else: 
+#     print(f"{scanned_item} is not currently available")
+
+scanned_item = input("Please scan item: ")
+price = prices.get(scanned_item)
+if price:
+    print(f"{scanned_item}: {price} CHF")
+else: 
+    print(f"{scanned_item} is not currently available")
