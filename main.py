@@ -962,30 +962,172 @@
 # print(item2)
 #############################
 
-harmonica = {"brand": "Hohner", "model": "MarineBand", "key": "Key of C"}
-harmonica['portability'] = True
-print(harmonica)
-print(harmonica['brand'])
-print(harmonica['model'])
+# harmonica = {"brand": "Hohner", "model": "MarineBand", "key": "Key of C"}
+# harmonica['portability'] = True
+# print(harmonica)
+# print(harmonica['brand'])
+# print(harmonica['model'])
+#############################
+# prices = {
+#     "chicken": 18.60,
+#     "beef": 10.80,
+#     "small peppers": 0.03,
+#     "mentos": 1.20,
+#     "redbull": 3.60,
+#     "noix de coco": 1.90
+# }
 
-prices = {
-    "chicken": 18.60,
-    "beef": 10.80,
-    "small peppers": 0.03,
-    "mentos": 1.20,
-    "redbull": 3.60
-}
+# # scanned_item = input("Please scan item: ")
+# # if scanned_item in prices:
+# #     price = prices[scanned_item]
+# #     print(f"{scanned_item}: {price} CHF")
+# # else: 
+# #     print(f"{scanned_item} is not currently available")
 
 # scanned_item = input("Please scan item: ")
-# if scanned_item in prices:
-#     price = prices[scanned_item]
+# price = prices.get(scanned_item)
+# if price:
 #     print(f"{scanned_item}: {price} CHF")
 # else: 
 #     print(f"{scanned_item} is not currently available")
 
-scanned_item = input("Please scan item: ")
-price = prices.get(scanned_item)
-if price:
-    print(f"{scanned_item}: {price} CHF")
-else: 
-    print(f"{scanned_item} is not currently available")
+# print(prices.pop("noix de coco"))
+
+# print(prices)
+# #############################
+
+# prices.popitem() # clears the most recent item
+# print(prices)
+
+# prices["lemon"] = 0.70
+# print(prices)
+# print(prices.popitem())
+# # prices.clear()
+# del prices["beef"]
+# print(prices)
+# prices.clear()
+# print(prices)
+
+total = 0
+longest_read = 0
+shortest_read = 100
+most_read = ''
+least_read = ''
+
+random_durations = {
+    "Anna": 43,
+    "Bob": 76,
+    "Samantha": 32,
+    "Picsou": 23,
+    "Yakari": 78,
+    "Charlie": 45,
+    "Tintin": 12,
+    "Falbala": 23
+}
+
+# print(random_durations.values())
+# print(random_durations.keys())
+
+# If we want to turn these into lists we can use:
+
+# keys = list(random_durations.keys())
+# values = list(random_durations.values())
+
+# print(keys)
+# print(values)
+
+# for name in random_durations.keys():
+#     print(name)
+
+# for duration in random_durations.values():
+#     total += duration
+
+# avg_reading_time = total/len(random_durations)
+
+# print(f"The average reading time per day for everyone is around {avg_reading_time} minutes")
+
+# for k, v in random_durations.items():
+#     print(f"{k}: {v}")
+
+for name, duration in random_durations.items():
+    if duration > longest_read:
+        longest_read = duration
+        most_read = name
+
+print(f"The longest read is {longest_read} minutes by {most_read}. ")
+
+# for name, duration in random_durations.items():
+for name, duration in random_durations.items():
+    if duration < shortest_read and duration != 0:
+        shortest_read = duration
+        least_read = name
+
+print(f"The shortest read is {shortest_read} minutes by {least_read}. ")
+
+for name in random_durations:
+    print(name)
+
+icao = {'a' : 'alpha', 'b' : 'bravo', 'c' : 'charlie', 'd' : 'delta'}
+
+more_letters = {'e' : 'echo', 'f' : 'foxtrot', 'g' : 'golf', 'h' : 'hotel'}
+
+icao.update(more_letters)
+print(icao)
+
+dict1 = {'a' : 'awesome', 'b' : 'bodacious'}
+dict2 = {'s' : 'stupendous', 'f' : 'fantastic'}
+dict4 = {'g' : 'grandiose', 'e' : 'exciting'}
+dict3 = {**dict1, **dict2}
+print(dict3)
+dict5 = {**dict3, **dict4}
+print(dict5)
+
+union_dict = dict1 | dict2 
+
+print(union_dict)
+
+three_union_dicts = dict1 | dict2 | dict4
+print(three_union_dicts)
+
+nested_dictionary = {
+    "pizza": {
+        'price': 4.80,
+        'qty': 1,
+        'frozen': True,
+        'producer': 'local'
+    },
+    "beef jerky": {
+        'price': 3.80,
+        'qty': 25,
+        'frozen': False,
+        'producer': 'Argentina'
+    }
+}
+
+print(nested_dictionary["pizza"])
+print(nested_dictionary["beef jerky"]['producer'])
+
+nested_reading = {
+    "Richard": [10,15,20,5,12],
+    "Tree": [20,15,5,16,32]
+}
+
+cycling_group = [
+    {
+        "name": "bob",
+        "location": "Lausanne",
+        "experience": "some"
+    },
+    {
+        "name": "Tiffany",
+        "location": "Morges",
+        "experience": "weekly rides"
+    },
+    {
+        "name": "Kadare",
+        "location": "Aubonne",
+        "experience": "some more"
+    }
+]
+
+print(cycling_group)

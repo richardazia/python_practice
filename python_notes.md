@@ -221,4 +221,12 @@ list[from:to:increment]
 - uses key value pairs
 - key: value
 - dict.get() keyword
+- pop, popitem, clear and del. Remember prices.popitem() has to be called to do something. 
+- We can use .keys(), .values() or .items()
+- dict_keys and dict_values are iterable
+- update allows you to import dictionary A into dictionary B. 
+- ** allows you to combine dictionary 1 with dictionary 2
+- The Union command, to combine two dictionaries. Uses the | symbol. 
+- Union can combine two or more dictionaries at a time. 
+
 
