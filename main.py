@@ -961,6 +961,7 @@
 
 # print(item2)
 #############################
+# Dictionary 
 
 # harmonica = {"brand": "Hohner", "model": "MarineBand", "key": "Key of C"}
 # harmonica['portability'] = True
@@ -1008,22 +1009,22 @@
 # prices.clear()
 # print(prices)
 
-total = 0
-longest_read = 0
-shortest_read = 100
-most_read = ''
-least_read = ''
+# total = 0
+# longest_read = 0
+# shortest_read = 100
+# most_read = ''
+# least_read = ''
 
-random_durations = {
-    "Anna": 43,
-    "Bob": 76,
-    "Samantha": 32,
-    "Picsou": 23,
-    "Yakari": 78,
-    "Charlie": 45,
-    "Tintin": 12,
-    "Falbala": 23
-}
+# random_durations = {
+#     "Anna": 43,
+#     "Bob": 76,
+#     "Samantha": 32,
+#     "Picsou": 23,
+#     "Yakari": 78,
+#     "Charlie": 45,
+#     "Tintin": 12,
+#     "Falbala": 23
+# }
 
 # print(random_durations.values())
 # print(random_durations.keys())
@@ -1049,85 +1050,122 @@ random_durations = {
 # for k, v in random_durations.items():
 #     print(f"{k}: {v}")
 
-for name, duration in random_durations.items():
-    if duration > longest_read:
-        longest_read = duration
-        most_read = name
-
-print(f"The longest read is {longest_read} minutes by {most_read}. ")
-
 # for name, duration in random_durations.items():
-for name, duration in random_durations.items():
-    if duration < shortest_read and duration != 0:
-        shortest_read = duration
-        least_read = name
+#     if duration > longest_read:
+#         longest_read = duration
+#         most_read = name
 
-print(f"The shortest read is {shortest_read} minutes by {least_read}. ")
+# print(f"The longest read is {longest_read} minutes by {most_read}. ")
 
-for name in random_durations:
-    print(name)
+# # for name, duration in random_durations.items():
+# for name, duration in random_durations.items():
+#     if duration < shortest_read and duration != 0:
+#         shortest_read = duration
+#         least_read = name
 
-icao = {'a' : 'alpha', 'b' : 'bravo', 'c' : 'charlie', 'd' : 'delta'}
+# print(f"The shortest read is {shortest_read} minutes by {least_read}. ")
 
-more_letters = {'e' : 'echo', 'f' : 'foxtrot', 'g' : 'golf', 'h' : 'hotel'}
+# for name in random_durations:
+#     print(name)
 
-icao.update(more_letters)
-print(icao)
+# icao = {'a' : 'alpha', 'b' : 'bravo', 'c' : 'charlie', 'd' : 'delta'}
 
-dict1 = {'a' : 'awesome', 'b' : 'bodacious'}
-dict2 = {'s' : 'stupendous', 'f' : 'fantastic'}
-dict4 = {'g' : 'grandiose', 'e' : 'exciting'}
-dict3 = {**dict1, **dict2}
-print(dict3)
-dict5 = {**dict3, **dict4}
-print(dict5)
+# add_letters = {'e' : 'echo', 'f' : 'foxtrot', 'g' : 'golf', 'h' : 'hotel'}
 
-union_dict = dict1 | dict2 
+# icao.update(add_letters)
+# print(icao)
 
-print(union_dict)
+# dict1 = {'a' : 'awesome', 'b' : 'bodacious'}
+# dict2 = {'s' : 'stupendous', 'f' : 'fantastic'}
+# dict4 = {'g' : 'grandiose', 'e' : 'exciting'}
+# dict3 = {**dict1, **dict2}
+# print(dict3)
+# dict5 = {**dict3, **dict4}
+# print(dict5)
 
-three_union_dicts = dict1 | dict2 | dict4
-print(three_union_dicts)
+# union_dict = dict1 | dict2 
 
-nested_dictionary = {
-    "pizza": {
-        'price': 4.80,
-        'qty': 1,
-        'frozen': True,
-        'producer': 'local'
-    },
-    "beef jerky": {
-        'price': 3.80,
-        'qty': 25,
-        'frozen': False,
-        'producer': 'Argentina'
-    }
-}
+# print(union_dict)
 
-print(nested_dictionary["pizza"])
-print(nested_dictionary["beef jerky"]['producer'])
+# three_union_dicts = dict1 | dict2 | dict4
+# print(three_union_dicts)
 
-nested_reading = {
-    "Richard": [10,15,20,5,12],
-    "Tree": [20,15,5,16,32]
-}
+# nested_dictionary = {
+#     "pizza": {
+#         'price': 4.80,
+#         'qty': 1,
+#         'frozen': True,
+#         'producer': 'local'
+#     },
+#     "beef jerky": {
+#         'price': 3.80,
+#         'qty': 25,
+#         'frozen': False,
+#         'producer': 'Argentina'
+#     }
+# }
 
-cycling_group = [
-    {
-        "name": "bob",
-        "location": "Lausanne",
-        "experience": "some"
-    },
-    {
-        "name": "Tiffany",
-        "location": "Morges",
-        "experience": "weekly rides"
-    },
-    {
-        "name": "Kadare",
-        "location": "Aubonne",
-        "experience": "some more"
-    }
-]
+# print(nested_dictionary["pizza"])
+# print(nested_dictionary["beef jerky"]['producer'])
 
-print(cycling_group)
+# nested_reading = {
+#     "Richard": [10,15,20,5,12],
+#     "Tree": [20,15,5,16,32]
+# }
+
+# cycling_group = [
+#     {
+#         "name": "bob",
+#         "location": "Lausanne",
+#         "experience": "some"
+#     },
+#     {
+#         "name": "Tiffany",
+#         "location": "Morges",
+#         "experience": "weekly rides"
+#     },
+#     {
+#         "name": "Kadare",
+#         "location": "Aubonne",
+#         "experience": "some more"
+#     }
+# ]
+
+# print(cycling_group)
+
+####################
+#### Tuples
+
+bike_parts = ("chain", "gear shifter", "tyres", "gears", "bar tape", "brakes", "saddle", "cables", "spokes")
+print(type(bike_parts))
+print(f"A single item: {bike_parts[2]}")
+print(f"A slice: {bike_parts[1:4]}")
+print(bike_parts.index("chain"))
+print(bike_parts.count("chain"))
+print("breaks" in bike_parts)
+print("mud" in bike_parts)
+
+for part in bike_parts:
+    print(f"A bike has: {part}")
+
+random_numbers = (3,4,5,32,1,3,2,6,3,7,3,8,5,34,2,4,5,6)
+print(random_numbers.count(3))
+
+varied_tuple = (True, False, (1,2,3,4), "The" "quick", 1,2,3,4, [2,3], {"duck": "tales"})
+print(type(varied_tuple))
+
+empty_tuple = ()
+empty_tuple = tuple()
+
+tuple = ("truck", )
+
+another_tuple = ("quantum dentistry", )
+print(type(tuple))
+print(type(another_tuple))
+
+tuple_with_brackets = (1,2,3,4,[])
+print(tuple_with_brackets)
+tuple_with_brackets[4].append("A work around")
+print(tuple_with_brackets)
+tuple_with_brackets[4].append("This adds flexibility")
+print(tuple_with_brackets)

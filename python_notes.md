@@ -229,4 +229,18 @@ list[from:to:increment]
 - The Union command, to combine two dictionaries. Uses the | symbol. 
 - Union can combine two or more dictionaries at a time. 
 
+# Tuples
+- simple list
+- immutable - equivalent to constant
+- Ordered lists
+- fewer methods available
+* bike_parts = ("chain", "gear shifter", "tyres")
+- When you have a single tuple you need to write it as 
+* tuple_name = "tuple with one item" or ("tuple with one item", )
+
+- efficient, immutable
+- If you use tuples as keys in a Digital Asset management tool then you can keep keys secure. 
+
+
+
 
