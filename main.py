@@ -1173,133 +1173,164 @@
 ####################
 #### Sets
 
-multiples_of_three = {3, 6, 9, 12, 15, 18, 21}
-multiples_of_three.add(24)
-multiples_of_three.add(27)
-multiples_of_three.add(5)
-print(multiples_of_three)
-multiples_of_three.remove(5)
-print(len(multiples_of_three))
+# multiples_of_three = {3, 6, 9, 12, 15, 18, 21}
+# multiples_of_three.add(24)
+# multiples_of_three.add(27)
+# multiples_of_three.add(5)
+# print(multiples_of_three)
+# multiples_of_three.remove(5)
+# print(len(multiples_of_three))
 
-diverse_set = {"a", "b", "c", 3, 6, 9, True, False}
-diverse_set.discard("duck")
-diverse_set.clear()
+# diverse_set = {"a", "b", "c", 3, 6, 9, True, False}
+# diverse_set.discard("duck")
+# diverse_set.clear()
 
-print(type(multiples_of_three))
-print(type(diverse_set))
+# print(type(multiples_of_three))
+# print(type(diverse_set))
 
-print({1,2,3} is {1,2,3})
-print({1,2,3} == {1,2,3})
+# print({1,2,3} is {1,2,3})
+# print({1,2,3} == {1,2,3})
 
-print(multiples_of_three)
-print(diverse_set)
+# print(multiples_of_three)
+# print(diverse_set)
 
-hiking = {"shoes", "walking", "versatile", "hiking shoes", "hiking sticks", "whenever possible"}
+# hiking = {"shoes", "walking", "versatile", "hiking shoes", "hiking sticks", "whenever possible"}
 
-walking = {"shoes", "walking", "versatile", "daily"}
+# walking = {"shoes", "walking", "versatile", "daily"}
 
-print(walking & hiking) # intersection
+# print(walking & hiking) # intersection
 
-print(walking | hiking) # union
+# print(walking | hiking) # union
 
-print(walking - hiking) # difference
+# print(walking - hiking) # difference
 
-union_walking = walking.union(hiking)
+# union_walking = walking.union(hiking)
 
-print(union_walking)
+# print(union_walking)
 
-a = {1,2,3}
-b = {2,4,6}
+# a = {1,2,3}
+# b = {2,4,6}
 
-mystery = a - b
+# mystery = a - b
 
-print(mystery)
+# print(mystery)
 
-duck = {'d', 'u', 'c', 'k'}
-print('d' in duck)
+# duck = {'d', 'u', 'c', 'k'}
+# print('d' in duck)
 
-print('d' in ['d', 'u', 'c', 'k'])
+# print('d' in ['d', 'u', 'c', 'k'])
 
-canton = ['AG', 'VD', 'AI', 'GE', 'FR', 'GE', 'VD']
+# canton = ['AG', 'VD', 'AI', 'GE', 'FR', 'GE', 'VD']
 
-set(canton) # converts to a set
+# set(canton) # converts to a set
 
-list(set(canton))
+# list(set(canton))
 
-min(2,3,4,6,4,3,7,6,8,9,0)
+# min(2,3,4,6,4,3,7,6,8,9,0)
 
-max(2,3,4,6,4,3,7,6,8,9,0)
+# max(2,3,4,6,4,3,7,6,8,9,0)
 
-def play_with_args(*args):
-    print(f"Output: you should see {len(args)} items listed below: ")
-    print(args)
+# def play_with_args(*args):
+#     print(f"Output: you should see {len(args)} items listed below: ")
+#     print(args)
 
-print(play_with_args(2,3,4,5,4,3,2,3,9,8,5,4,'b', 'a', 'c', True, False))
-print(play_with_args('roesti', 'bacon', 'pepper'))
+# print(play_with_args(2,3,4,5,4,3,2,3,9,8,5,4,'b', 'a', 'c', True, False))
+# print(play_with_args('roesti', 'bacon', 'pepper'))
+
+# def sum(*nums):
+#     tot = 0
+#     for num in nums:
+#         tot += num
+#     return tot
+
+# def phrase_maker(primary, secondary, *superfluous):
+#     print(f"Your primary goal is to: {primary}")
+#     print(f"Your secondary goal is to: {secondary}")
+#     print(f"We are just random things: {superfluous}")
+
+# print(phrase_maker('study', 'scramble', 1,2,3,4, True, False, 'more words'))
+
+# def see_for_yourself(**kwargs):
+#     print(kwargs)
+
+# # print(see_for_yourself('"the", "running", "albatros", "flew", "over", "the", "island", 12, "times"'))
+# # TypeError: see_for_yourself() takes 0 positional arguments but 1 was given
+
+# see_for_yourself(bird = "duck", sport = "cycling", danger = "low")
+# see_for_yourself(colour = "green", youth = 6, circumference = 152)
+
+# def circumference(**kwargs):
+#     for k,v in kwargs.item():
+#         print(f"A {k} wheel has a {v} circumference.")
+
+# # circumference(iso = "25-622", metric = 700)
+
+# def car_wash(**kwargs):
+#     for k,v in kwargs.items():
+#         print(f"The {k} model car was washed {v} days ago.")
+
+# car_wash(type = "C3", time_elapsed = 720) 
+
+# def print_ages(**kwargs):
+#     for k,v in kwargs.items():
+#         print(f"The great {k} is {v} years young.")
+
+# print_ages(Nameless = 52)
+# print_ages(bob = 58, Sue = 12, Jaberwocky = 15, Marina = 32)
+
+# #Keep this order, required info, field with a default, args and kwargs. 
+
+# def character_info(name, current_status="thirsty", *args , **kwargs):
+#     print(f"The individual's name is {name}.")
+#     print(f"The person is currently {current_status}.")
+#     print(f"Today's drink of choice will be filled with {args}.")
+#     print(f"kwargs: {kwargs}")
+
+# character_info("Richard", "dehydrated", "electrolytes", weather = "on a sunny day")
+
+# def laughter(val, list=[]):
+#     list.append(val)
+#     list.append(val)
+#     return list
+
+# print(laughter("ha"))
+# print(laughter("hi"))
+# print(laughter("ho"))
+# print(laughter("he"))
+
+# # The default value is shared, getting longer and longer with each iteration. 
+# # ['ha', 'ha']
+# # ['ha', 'ha', 'hi', 'hi']
+# # ['ha', 'ha', 'hi', 'hi', 'ho', 'ho']
+
+# # We get around this problem by using list=None with an if statement
+
+# def laughter(val, list=None):
+#     if list is None:
+#         list = []
+#     list.append(val)
+#     list.append(val)
+#     return list
+# print(laughter("Not again"))
+# print(laughter("yep"))
+# print(laughter("Nope"))
+
+# Clean output
+# ['Not again', 'Not again']
+# ['yep', 'yep']
+# ['Nope', 'Nope']
+####################
 
 def sum(*nums):
     tot = 0
+    print(nums)
     for num in nums:
         tot += num
     return tot
 
-def phrase_maker(primary, secondary, *superfluous):
-    print(f"Your primary goal is to: {primary}")
-    print(f"Your secondary goal is to: {secondary}")
-    print(f"We are just random things: {superfluous}")
+nums = [345, 82,23,48,98,34,15,19,16,23]
 
-print(phrase_maker('study', 'scramble', 1,2,3,4, True, False, 'more words'))
+# print(sum(nums)) # For the error message
+#Unpacked via the star (*)
+print(sum(*nums))
 
-def see_for_yourself(**kwargs):
-    print(kwargs)
-
-# print(see_for_yourself('"the", "running", "albatros", "flew", "over", "the", "island", 12, "times"'))
-# TypeError: see_for_yourself() takes 0 positional arguments but 1 was given
-
-see_for_yourself(bird = "duck", sport = "cycling", danger = "low")
-see_for_yourself(colour = "green", youth = 6, circumference = 152)
-
-def circumference(**kwargs):
-    for k,v in kwargs.item():
-        print(f"A {k} wheel has a {v} circumference.")
-
-# circumference(iso = "25-622", metric = 700)
-
-def car_wash(**kwargs):
-    for k,v in kwargs.items():
-        print(f"The {k} model car was washed {v} days ago.")
-
-car_wash(type = "C3", time_elapsed = 720) 
-
-def print_ages(**kwargs):
-    for k,v in kwargs.items():
-        print(f"The great {k} is {v} years young.")
-
-print_ages(Nameless = 52)
-print_ages(bob = 58, Sue = 12, Jaberwocky = 15, Marina = 32)
-
-#Keep this order, required info, field with a default, args and kwargs. 
-
-def character_info(name, current_status="thirsty", *args , **kwargs):
-    print(f"The individual's name is {name}.")
-    print(f"The person is currently {current_status}.")
-    print(f"Today's drink of choice will be filled with {args}.")
-    print(f"kwargs: {kwargs}")
-
-character_info("Richard", "dehydrated", "electrolytes", weather = "on a sunny day")
-
-def laughter(val, list=[]):
-    list.append(val)
-    list.append(val)
-    return list
-
-print(laughter("ha"))
-print(laughter("hi"))
-print(laughter("ho"))
-print(laughter("he"))
-
-# The default value is shared, getting longer and longer with each iteration. 
-# ['ha', 'ha']
-# ['ha', 'ha', 'hi', 'hi']
-# ['ha', 'ha', 'hi', 'hi', 'ho', 'ho']
-####################
