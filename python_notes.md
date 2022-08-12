@@ -241,6 +241,21 @@ list[from:to:increment]
 - efficient, immutable
 - If you use tuples as keys in a Digital Asset management tool then you can keep keys secure. 
 
+# Sets
+- unordered collections
+- no duplicates
+- only immutable elements
+- add and delete
+- iterable
+- see whether an element is within a set or not
+* use set() to create an empty set, not {}
+* difference = '-'
+* union = '|'
+* intersection = '&'
+* *args collects all arguments provided. (although args could be num, flamingos or anything else that is relevant to the context of the function)
+* order is important when using params, *args, def params and **kwargs. 
+* For kwargs remember to use a key and value every time. 
+
 
 
 
