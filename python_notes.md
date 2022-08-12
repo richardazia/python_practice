@@ -255,6 +255,9 @@ list[from:to:increment]
 * *args collects all arguments provided. (although args could be num, flamingos or anything else that is relevant to the context of the function)
 * order is important when using params, *args, def params and **kwargs. 
 * For kwargs remember to use a key and value every time. 
+- We unpack by using a * sum(*numbers). If we passed numbers in sum directly we would get an unsupported operand type for += 'int' and 'list'
+
+
 
 
 
