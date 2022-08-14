@@ -6,7 +6,7 @@
 #  contains_pickle("red", 45, "pickle", [])  --> True
 #  contains_pickle(1,2, "blue") ---------------> False
 
-    
+# contains_pickle = {"red", 45, "pickle", []}
     
 
 
@@ -20,7 +20,19 @@
 # count_fails(85,78,91) ----------> 0
 # count_fails(50,41,47,74,76,81) -> 3
 
-
+def grades(*count_fails):
+    failed = 0
+    for fail in count_fails:
+        if int(fail) <= 50:
+            print("one more fail")
+            failed += 1
+    print(f"There were {failed} fails  in the class")
+print("1.")
+print(grades(99,48,79,36)) # Two fails
+print("2.")
+print(grades(85,78,91))
+print("3.")
+print(grades(50,41,47,74,76,81))
 
 
 
