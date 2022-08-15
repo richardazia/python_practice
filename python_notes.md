@@ -257,6 +257,30 @@ list[from:to:increment]
 * For kwargs remember to use a key and value every time. 
 - We unpack by using a * sum(*numbers). If we passed numbers in sum directly we would get an unsupported operand type for += 'int' and 'list'
 
+# Exceptions and errors
+* https://docs.python.org/3/library/exceptions.html for up to date exceptions
+- If we want to get our own error messages we use the keyword "raise". We can raise the defaults and provide our own error message.
+## Try and except
+- When we use except we can either use except by itself or we can specify what the error was, for example "except EOFError" or other. 
+
+### Look Before you Leap - LBYL
+- if this, then that, else do something else. 
+- Use a conditional to see if something is true, before continuing. 
+### Easier to Ask for Forgiveness than Permission (EAFP)
+- Assume things will work, and see exceptions if and when they occur. 
+- Python way of doing things
+
+## Modules
+-flexible functionality via small files for specific tasks
+* Built in
+* Custom
+* 3rd party
+- we can "import as" - import random as rand
+* import calendar as cal 
+* from random import randint - This will import just that function, nothing else. 
+* from math import pi
+* with comma we can write from math import randint, pi, e etc. 
+
 
 
 

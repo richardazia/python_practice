@@ -1321,16 +1321,81 @@
 # ['Nope', 'Nope']
 ####################
 
-def sum(*nums):
-    tot = 0
-    print(nums)
-    for num in nums:
-        tot += num
-    return tot
+# def sum(*nums):
+#     tot = 0
+#     print(nums)
+#     for num in nums:
+#         tot += num
+#     return tot
 
-nums = [345, 82,23,48,98,34,15,19,16,23]
+# nums = [345, 82,23,48,98,34,15,19,16,23]
 
-# print(sum(nums)) # For the error message
-#Unpacked via the star (*)
-print(sum(*nums))
+# # print(sum(nums)) # For the error message
+# #Unpacked via the star (*)
+# print(sum(*nums))
+
+####################
+# Raising exceptions
+# We can raise exceptions, for example when getting user input
+
+# def check_username_uses_letters():
+#     input = input('Please enter your name: ')
+#     if not input.isalpha():
+#         raise ValueError
+#     return input
+
+# try: 
+#     num = int(input("Enter a number: "))
+# # except: 
+# #     print("Except ran")
+# #     num = 7
+
+# except ValueError: 
+#     print("Except ran")
+#     num = 7
+# except EOFError:
+#     print("No input detected")
+#     num = 0
+
+# print(f"The number is : {num}")
+
+# LBYL
+# try:
+#     year = input("Enter a year:")
+# except ValueError:
+#     year = 2025
+
+# Modules
+
+import random
+print(random.randint(1,900000))
+print(random.randint(1,900000))
+print(random.randint(1,900000))
+print(random.randint(1,900000))
+print(random.randint(1,900000))
+print(random.randint(1,900000))
+print(random.randint(1,900000))
+print(random.randint(1,900000))
+print(random.randint(1,900000))
+print(random.randint(1,900000))
+print(random.randint(1,900000))
+print(random.randint(1,900000))
+print(random.randint(1,900000))
+
+import calendar
+print(calendar.isleap(1988))
+print(calendar.weekday(2022,8,14))
+print(calendar.MONDAY)
+print(calendar.month(2022, 11, w=1))
+
+import math
+
+print(math.cos(1))
+print(math.hypot(3,9))
+print(math.ceil(613.6573))
+print(math.pi)
+print(math.e)
+
+print(math.nan)
+
 
