@@ -281,6 +281,13 @@ list[from:to:increment]
 * from math import pi
 * with comma we can write from math import randint, pi, e etc. 
 
+## PIP
+- to check pip version: python3 -m pip --version
+- to look for packages
+- to install packages python3 -m pip install <package>
+* Playing with text to speech - Download the corpora lite package for the second part
+
+
 
 
 

@@ -1367,35 +1367,54 @@
 
 # Modules
 
-import random
-print(random.randint(1,900000))
-print(random.randint(1,900000))
-print(random.randint(1,900000))
-print(random.randint(1,900000))
-print(random.randint(1,900000))
-print(random.randint(1,900000))
-print(random.randint(1,900000))
-print(random.randint(1,900000))
-print(random.randint(1,900000))
-print(random.randint(1,900000))
-print(random.randint(1,900000))
-print(random.randint(1,900000))
-print(random.randint(1,900000))
+# import random
+# print(random.randint(1,900000))
+# print(random.randint(1,900000))
+# print(random.randint(1,900000))
+# print(random.randint(1,900000))
+# print(random.randint(1,900000))
+# print(random.randint(1,900000))
+# print(random.randint(1,900000))
+# print(random.randint(1,900000))
+# print(random.randint(1,900000))
+# print(random.randint(1,900000))
+# print(random.randint(1,900000))
+# print(random.randint(1,900000))
+# print(random.randint(1,900000))
 
-import calendar
-print(calendar.isleap(1988))
-print(calendar.weekday(2022,8,14))
-print(calendar.MONDAY)
-print(calendar.month(2022, 11, w=1))
+# import calendar
+# print(calendar.isleap(1988))
+# print(calendar.weekday(2022,8,14))
+# print(calendar.MONDAY)
+# print(calendar.month(2022, 11, w=1))
 
-import math
+# import math
 
-print(math.cos(1))
-print(math.hypot(3,9))
-print(math.ceil(613.6573))
-print(math.pi)
-print(math.e)
+# print(math.cos(1))
+# print(math.hypot(3,9))
+# print(math.ceil(613.6573))
+# print(math.pi)
+# print(math.e)
 
-print(math.nan)
+# print(math.nan)
+# Play with art
+# import art
+# coffee=art.art("coffee")
+# print(coffee)
+# duck=art.art("duck")
+# print(duck)
+# random=art.art("random")
+# print(random)
+# rose=art.art("rose")
+# print(rose)
+# goat=art.art("goat")
+# print(goat)
+
+# twitter=art.text2art("Twitter")
+# print(twitter)
+# SnakeEyes=art.text2art("Snake Eyes")
+# print(SnakeEyes)
+# good_morning_world=art.text2art("Good Morning World")
+# print(good_morning_world)
 
 
