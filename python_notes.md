@@ -287,9 +287,19 @@ list[from:to:increment]
 - to install packages python3 -m pip install <package>
 * Playing with text to speech - Download the corpora lite package for the second part
 
+# OOP
+- oop.py for examples
 
+## Create a Class
+* We can create a class element, for example cat, and then provide relevant information for that object. 
+* we can use isinstance to check whether it is an instance of what we want. 
 
+## Add methods
+* We can add methods to an object by indenting by one tab. We can then give functionality to our objects. For example "cat play with laser" and more. 
 
-
+## Class Methods
+- methods that are available on the class directly
+- uses a decorator such as @classmethod
+- inheritance is similar to javascript
 
 
