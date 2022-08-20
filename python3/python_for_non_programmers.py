@@ -76,3 +76,41 @@ else:
 
 print(f"Today is day: {day}, {day_name}, in the month of {month_name} and the outside air temperature is {temp}°c")
 
+# Experiment with python-weather
+
+import python_weather
+import asyncio
+import os
+
+async def getweather():
+  # declare client, format default to metric.
+  async with python_weather.Client(format=python_weather.METRIC) as client:
+    
+    # Fetch weather from Lausanne
+    weather = await client.get("Lausanne")
+
+    lausanne_temp = weather.current.temperature
+    lausanne_desc = weather.current.description
+    # local_time = weather.current.local_time
+    # local_uv = weather.current.uv_index
+
+    print(lausanne_temp)
+    # print(f"The current time is {local_time} and the UV index is of {local_uv}")
+    print(f"Today is day: {day}, {day_name}, in the month of {month_name} and the outside air temperature is {lausanne_temp}°c.\nCurrent weather: {lausanne_desc}")
+
+    # see the weather for a few days
+    for forecast in weather.forecasts:
+      print(forecast.date, forecast.astronomy)
+
+      #Hourly
+      for hourly in forecast.hourly:
+        print(f' --> {hourly!r}')
+
+if __name__ == "__main__":
+  # see https://stackoverflow.com/questions/45600579/asyncio-event-loop-is-closed-when-getting-loop
+  # for more details
+  if os.name == "nt":
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+
+  asyncio.run(getweather())
+
