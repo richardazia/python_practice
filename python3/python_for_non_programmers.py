@@ -313,27 +313,37 @@ print("*" * 20)
 print("Paper beats rock")
 print("Rock beats scissors")
 print("Scissors beat paper")
+
 print("*" * 20)
 print("Player 1: Please select your option. ")
 player1 = input("Player 1: ")
 print("\n" * 20)
 player2 = input("Player 2: ")
 
-if player1 == "rock" and player2 == "scissors":
-  print("Player 1 wins, Rock smashes scissors")
-elif player1 == "paper" and player2 == "scissors":
-  print("Player 2 wins, scissors cut paper")
-elif player1 == "scissors" and player2 == "paper":
-  print("Player 1 wins, scissors cut paper")
-elif player1 == "scissors" and player2 == "rock":
-  print("Player two wins, rock smashes scissors")
-elif player1 == "rock" and player2 == "paper":
-  print("Player 2 wins, paper wraps rock")
-elif player1 == "rock" and player2 == "rock":
-  print("Oups, you tied")
-elif player1 == "paper" and player2 == "paper":
-  print("Oups, you tied")
-elif player1 == "scissors" and player2 == "scissors":
-  print("Oups, you tied")
-else: 
-  print(f"You entered an invalid set of items: Either {player1} or {player2} are not attributed.")
+if player1 == "rock": 
+  if player2 == "scissors":
+    print("Player 1 wins, Rock smashes scissors")
+elif player1 == "paper": 
+  if player2 == "scissors":
+    print("Player 2 wins, scissors cut paper")
+elif player1 == "scissors":
+  if player2 == "paper":
+    print("Player 1 wins, scissors cut paper")
+elif player1 == "scissors":
+  if player2 == "rock":
+    print("Player two wins, rock smashes scissors")
+elif player1 == "rock": 
+  if player2 == "paper":
+    print("Player 2 wins, paper wraps rock")
+elif player1 == "rock": 
+  if player2 == "rock":
+    print("Oups, you tied")
+elif player1 == "paper": 
+  if player2 == "paper":
+    print("Oups, you tied")
+elif player1 == "scissors": 
+  if player2 == "scissors":
+    print("Oups, you tied")
+elif player1 != "rock" or player1 != "scissors" or player1 != "paper":
+  if player2 != "rock" or player2 != "scissors" or player2 != "paper":
+    print(f"You entered an invalid set of items: Either {player1} or {player2} are not attributed.")
