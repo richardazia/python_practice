@@ -302,9 +302,19 @@
 ################################################################################
 
 import art
+import random
 
 rps=art.text2art("Rock * Paper * Scissors") # Return ASCII text (default font) and default chr_ignore=True 
 print(rps)
+
+computer = random.randint(1, 3)
+
+if computer == 1:
+  player2 = "rock"
+elif computer == 2:
+  player2 = "paper"
+else:
+  player2 = "scissors"
 
 print("*" * 20)
 print("Welcome to Rock Paper Scissors")
@@ -318,7 +328,8 @@ print("*" * 20)
 print("Player 1: Please select your option. ")
 player1 = input("Player 1: ")
 print("\n" * 20)
-player2 = input("Player 2: ")
+# player2 = input("Player 2: ")
+print(f"Computer plays: {player2}")
 
 if player1 == player2:
   print("You both played the same hand and tied")
