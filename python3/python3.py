@@ -136,10 +136,34 @@
 #   pwd = input("You may enter, after having told us the pass phrase: ")
 # print("Fantastic, you may now enter")
 
-for smiley in range(1,10):
+for smiley in range(1,11):
   print("\U0001f600" * smiley)
 
 smile = 0
-while smile < 10:
+while smile <= 10:
   print("\U0001f600" * smile)
   smile += 1
+
+# Nested loop course example
+print("I want this in triplicate")
+for x in range(3): # The next loop will repeat three times
+  for num in range(1,11):
+    print("\U0001f600" * num)
+
+print("The inelegant way of solving the challenge")
+# Without string multiplication 
+for num in range(1,11):
+  count = 1
+  smileys = ""
+  while count <= num:
+    smileys += "\U0001f600"
+    count += 1
+  print(smileys)
+
+# The Stop Copying Me App
+
+imitate = input("Hey, how are you? What are you up to? ")
+while imitate != "oh behave":
+  print(f"{imitate} - " )
+  imitate = input(f"{imitate}: ")
+print("Fine, I will, but this isn't over. ")
