@@ -351,3 +351,5 @@ elif player1 == "rock":
 elif player1 != "rock" or player1 != "scissors" or player1 != "paper":
   if player2 != "rock" or player2 != "scissors" or player2 != "paper":
     print(f"You entered an invalid set of items: Either {player1} or {player2} are not attributed.")
+
+    
