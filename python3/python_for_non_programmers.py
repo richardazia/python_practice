@@ -366,19 +366,53 @@ guess = art.text2art("Guess The Number") # Return ASCII text (default font) and 
 print(guess)
 x = 1
 
-to_guess = random.randint(1,6)
-attempt = int(input("Can you guess the number I am thinking of? "))
-while attempt != to_guess:
-  if attempt < to_guess:
-    print("Too low")
-  else:
-    print("Too high")
+# to_guess = random.randint(1,6)
+# play = input("Would you like to play a game of Guess The number? (Yes or No): ")
+# if play == ("Yes"):
+#   attempt = int(input("Can you guess the number I am thinking of? "))
+#   while attempt != to_guess:
+#     if attempt < to_guess:
+#       print("Too low")
+#     else:
+#       print("Too high")
+#     attempt = int(input("Can you guess the number I am thinking of? "))
+#     x += 1
+#   if x == 1:
+#     print("That was a lucky guess")
+#   elif x >= 1 or x <= 3:
+#     print(" Still better than a one in three chance")
+#   else:
+#     print("Today was not your day")
+#   print(f"It took {x} guesses")
+# else: 
+#   print("Thanks for playing, see you again soon!")
+
+# Attempt to refactor app
+def game(): 
+  to_guess = random.randint(1,6)
+  x = 0
   attempt = int(input("Can you guess the number I am thinking of? "))
-  x += 1
-if x == 1:
-  print("That was a lucky guess")
-elif x >= 1 or x <= 3:
-  print(" Still better than a one in three chance")
-else:
-  print("Today was not your day")
-print(f"It took {x} guesses")
+  while attempt != to_guess:
+    if attempt < to_guess:
+      print("Too low")
+    else:
+      print("Too high")
+    attempt = int(input("Can you guess the number I am thinking of? "))
+    x += 1
+  if x == 1:
+    print("That was a lucky guess")
+  elif x >= 1 or x <= 3:
+    print(" Still better than a one in three chance")
+  else:
+    print("Today was not your day")
+  print(f"It took {x} guesses")
+  play_again()
+
+def play_again():
+  play = input("Would you like to play a game of Guess The number? (Yes or No): ")
+  if play == ("Yes"):
+    game()
+  else: 
+    print("Thanks for playing, see you again soon!")
+
+play_again()
