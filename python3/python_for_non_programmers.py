@@ -301,55 +301,84 @@
 
 ################################################################################
 
-import art
+# import art
+# import random
+
+# rps=art.text2art("Rock * Paper * Scissors") # Return ASCII text (default font) and default chr_ignore=True 
+# print(rps)
+
+# computer = random.randint(1, 3)
+
+# if computer == 1:
+#   player2 = "rock"
+# elif computer == 2:
+#   player2 = "paper"
+# else:
+#   player2 = "scissors"
+
+# print("*" * 20)
+# print("Welcome to Rock Paper Scissors")
+# print("You can use 'rock', 'paper' or 'scissors'.")
+# print("*" * 20)
+# print("Paper beats rock")
+# print("Rock beats scissors")
+# print("Scissors beat paper")
+
+# print("*" * 20)
+# print("Player 1: Please select your option. ")
+# player1 = input("Player 1: ")
+# print("\n" * 20)
+# # player2 = input("Player 2: ")
+# print(f"Computer plays: {player2}")
+
+# if player1 == player2:
+#   print("You both played the same hand and tied")
+# elif player1 == "rock": 
+#   if player2 == "scissors":
+#     print("Player 1 wins, Rock smashes scissors")
+# elif player1 == "paper": 
+#   if player2 == "scissors":
+#     print("Player 2 wins, scissors cut paper")
+# elif player1 == "scissors":
+#   if player2 == "paper":
+#     print("Player 1 wins, scissors cut paper")
+# elif player1 == "scissors":
+#   if player2 == "rock":
+#     print("Player two wins, rock smashes scissors")
+# elif player1 == "rock": 
+#   if player2 == "paper":
+#     print("Player 2 wins, paper wraps rock")
+# elif player1 != "rock" or player1 != "scissors" or player1 != "paper":
+#   if player2 != "rock" or player2 != "scissors" or player2 != "paper":
+#     print(f"You entered an invalid set of items: Either {player1} or {player2} are not attributed.")
+
+# cat_name = input("What is your cat called? ")
+# print(f"{cat_name} is a good cat name. ")
+
+# normal_string = "The Quick brown fox jumped over the lazy dog"
+
+# print(f"{normal_string} and now I am angry '{normal_string.upper()}'")
+
 import random
+import art
 
-rps=art.text2art("Rock * Paper * Scissors") # Return ASCII text (default font) and default chr_ignore=True 
-print(rps)
+guess = art.text2art("Guess The Number") # Return ASCII text (default font) and default chr_ignore=True 
+print(guess)
+x = 1
 
-computer = random.randint(1, 3)
-
-if computer == 1:
-  player2 = "rock"
-elif computer == 2:
-  player2 = "paper"
+to_guess = random.randint(1,6)
+attempt = int(input("Can you guess the number I am thinking of? "))
+while attempt != to_guess:
+  if attempt < to_guess:
+    print("Too low")
+  else:
+    print("Too high")
+  attempt = int(input("Can you guess the number I am thinking of? "))
+  x += 1
+if x == 1:
+  print("That was a lucky guess")
+elif x >= 1 or x <= 3:
+  print(" Still better than a one in three chance")
 else:
-  player2 = "scissors"
-
-print("*" * 20)
-print("Welcome to Rock Paper Scissors")
-print("You can use 'rock', 'paper' or 'scissors'.")
-print("*" * 20)
-print("Paper beats rock")
-print("Rock beats scissors")
-print("Scissors beat paper")
-
-print("*" * 20)
-print("Player 1: Please select your option. ")
-player1 = input("Player 1: ")
-print("\n" * 20)
-# player2 = input("Player 2: ")
-print(f"Computer plays: {player2}")
-
-if player1 == player2:
-  print("You both played the same hand and tied")
-elif player1 == "rock": 
-  if player2 == "scissors":
-    print("Player 1 wins, Rock smashes scissors")
-elif player1 == "paper": 
-  if player2 == "scissors":
-    print("Player 2 wins, scissors cut paper")
-elif player1 == "scissors":
-  if player2 == "paper":
-    print("Player 1 wins, scissors cut paper")
-elif player1 == "scissors":
-  if player2 == "rock":
-    print("Player two wins, rock smashes scissors")
-elif player1 == "rock": 
-  if player2 == "paper":
-    print("Player 2 wins, paper wraps rock")
-elif player1 != "rock" or player1 != "scissors" or player1 != "paper":
-  if player2 != "rock" or player2 != "scissors" or player2 != "paper":
-    print(f"You entered an invalid set of items: Either {player1} or {player2} are not attributed.")
-
-    
+  print("Today was not your day")
+print(f"It took {x} guesses")
