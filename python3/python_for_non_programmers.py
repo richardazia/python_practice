@@ -301,56 +301,58 @@
 
 ################################################################################
 
-# import art
-# import random
+import art
+import random
 
-# rps=art.text2art("Rock * Paper * Scissors") # Return ASCII text (default font) and default chr_ignore=True 
-# print(rps)
+def rps():
+  rps=art.text2art("Rock * Paper * Scissors") # Return ASCII text (default font) and default chr_ignore=True 
+  print(rps)
+  computer = random.randint(1, 3)
 
-# computer = random.randint(1, 3)
+  if computer == 1:
+    player2 = "rock"
+  elif computer == 2:
+    player2 = "paper"
+  else:
+    player2 = "scissors"
 
-# if computer == 1:
-#   player2 = "rock"
-# elif computer == 2:
-#   player2 = "paper"
-# else:
-#   player2 = "scissors"
+  print("*" * 20)
+  print("Welcome to Rock Paper Scissors")
+  print("You can use 'rock', 'paper' or 'scissors'.")
+  print("*" * 20)
+  print("Paper beats rock")
+  print("Rock beats scissors")
+  print("Scissors beat paper")
 
-# print("*" * 20)
-# print("Welcome to Rock Paper Scissors")
-# print("You can use 'rock', 'paper' or 'scissors'.")
-# print("*" * 20)
-# print("Paper beats rock")
-# print("Rock beats scissors")
-# print("Scissors beat paper")
+  print("*" * 20)
+  print("Player 1: Please select your option. ")
+  player1 = input("Player 1: ")
+  print("\n" * 20)
+  # player2 = input("Player 2: ")
+  print(f"Computer plays: {player2}")
 
-# print("*" * 20)
-# print("Player 1: Please select your option. ")
-# player1 = input("Player 1: ")
-# print("\n" * 20)
-# # player2 = input("Player 2: ")
-# print(f"Computer plays: {player2}")
+  if player1 == player2:
+    print("You both played the same hand and tied")
+  elif player1 == "rock": 
+    if player2 == "scissors":
+      print("Player 1 wins, Rock smashes scissors")
+  elif player1 == "paper": 
+    if player2 == "scissors":
+      print("Player 2 wins, scissors cut paper")
+  elif player1 == "scissors":
+    if player2 == "paper":
+      print("Player 1 wins, scissors cut paper")
+  elif player1 == "scissors":
+    if player2 == "rock":
+      print("Player two wins, rock smashes scissors")
+  elif player1 == "rock": 
+    if player2 == "paper":
+      print("Player 2 wins, paper wraps rock")
+  elif player1 != "rock" or player1 != "scissors" or player1 != "paper":
+    if player2 != "rock" or player2 != "scissors" or player2 != "paper":
+      print(f"You entered an invalid set of items: Either {player1} or {player2} are not attributed.")
 
-# if player1 == player2:
-#   print("You both played the same hand and tied")
-# elif player1 == "rock": 
-#   if player2 == "scissors":
-#     print("Player 1 wins, Rock smashes scissors")
-# elif player1 == "paper": 
-#   if player2 == "scissors":
-#     print("Player 2 wins, scissors cut paper")
-# elif player1 == "scissors":
-#   if player2 == "paper":
-#     print("Player 1 wins, scissors cut paper")
-# elif player1 == "scissors":
-#   if player2 == "rock":
-#     print("Player two wins, rock smashes scissors")
-# elif player1 == "rock": 
-#   if player2 == "paper":
-#     print("Player 2 wins, paper wraps rock")
-# elif player1 != "rock" or player1 != "scissors" or player1 != "paper":
-#   if player2 != "rock" or player2 != "scissors" or player2 != "paper":
-#     print(f"You entered an invalid set of items: Either {player1} or {player2} are not attributed.")
+#####################################################################3333
 
 # cat_name = input("What is your cat called? ")
 # print(f"{cat_name} is a good cat name. ")
@@ -415,4 +417,19 @@ def play_again():
   else: 
     print("Thanks for playing, see you again soon!")
 
-play_again()
+# play_again()
+
+game_picker = art.text2art("Pick A Game") # Return ASCII text (default font) and default chr_ignore=True 
+print(game_picker)
+
+print("Which game would you like to play?")
+print("1: Rock, Paper, Scisssors(1)")
+print("2: Guess the number(2)") 
+
+selected = input("1 or 2: ")
+if selected == "1":
+  rps()
+elif selected == "2":
+  play_again()
+else: 
+  print("That choice is not available yet")
