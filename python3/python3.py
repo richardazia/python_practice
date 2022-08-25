@@ -170,22 +170,105 @@
 
 # Using break:
 
-while True:
-  command = input("Type ':q' to exit: ")
-  if (command == ":q"):
-    break
+# while True:
+#   command = input("Type ':q' to exit: ")
+#   if (command == ":q"):
+#     break
 
-  from random import randint  # use randint(a, b) to generate a random number between a and b
+#   from random import randint  # use randint(a, b) to generate a random number between a and b
 
-# Challenge solution: 
+# # Challenge solution: 
 
-number = 0 # store random number in here, each time through
-i = 0  # i should be incremented by one each iteration
+# number = 0 # store random number in here, each time through
+# i = 0  # i should be incremented by one each iteration
 
-number = randint(1,10)
+# number = randint(1,10)
 
-while number != 5:
-    number = randint(1,10)
-    i += 1
+# while number != 5:
+#     number = randint(1,10)
+#     i += 1
 
-  
+  # Define my_stuff 
+# my_stuff = ["A phone", "a laptop", 3.5, True, False, "a second laptop", "a chair", "a desk"]
+
+# Define nums - two ways of getting numbers from 1-99 
+# The functional approach
+# def nums():
+#   for nums in range(1,100):
+#     print(nums)
+# nums()
+
+# getting a range of numbers into a list. (1-99)
+i = 0
+nums = list(range(1,42))
+while i < len(nums):
+  print(nums[i])
+  i+= 1
+
+
+# List
+ducks = ["Donald", "Daisy", "Riri", "Zaza"]
+
+#Iterate over the list
+# For
+for duck in ducks:
+  print(f"{duck} Duck")
+
+# While
+i = 0
+while i < len(ducks):
+  print(f"While loop item {i + 1}: {ducks[i]} Duck")
+  i += 1
+
+#######################
+sounds = ["super", "cali", "fragil", "istic", "expi", "ali", "docious"]
+
+# Define your code below:
+# Tried with a while loop
+# The While Loop did not play nicely. 
+# i = 0
+# result = ""
+# results = []
+# while i < len(sounds):
+#   print(sounds[i])
+#   # results.append(sounds[i])
+#   sounds[i] = (result)
+#   print(result)
+#   result += results
+#   print(results)
+#   i += 1
+# print(results)
+
+results = ''.join(sounds)
+print(results.upper())
+# With a for Loop
+
+result = ''
+for segment in sounds:
+  result += segment.upper()
+print(result)
+
+#######################
+
+# Compare append to extend
+nums = [1,2,3]
+
+nums.append([4,5])
+print(nums)
+
+# And now if we extend instead
+nums2 = [6,7,8]
+print(nums2)
+nums2.extend([9,10,11])
+print(f"Now everything is in the same list: {nums2}") 
+
+# Insert allows something to inserted precisely
+
+phrase = ["The", "duck", "across", "lake"]
+
+phrase.insert(1, "quick")
+print(phrase)
+phrase.insert(-1, "reflective")
+phrase.insert(-2, "the")
+phrase.insert(3, "skates")
+print(phrase)
