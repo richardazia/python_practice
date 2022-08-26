@@ -199,76 +199,152 @@
 # nums()
 
 # getting a range of numbers into a list. (1-99)
-i = 0
-nums = list(range(1,42))
-while i < len(nums):
-  print(nums[i])
-  i+= 1
-
-
-# List
-ducks = ["Donald", "Daisy", "Riri", "Zaza"]
-
-#Iterate over the list
-# For
-for duck in ducks:
-  print(f"{duck} Duck")
-
-# While
-i = 0
-while i < len(ducks):
-  print(f"While loop item {i + 1}: {ducks[i]} Duck")
-  i += 1
-
-#######################
-sounds = ["super", "cali", "fragil", "istic", "expi", "ali", "docious"]
-
-# Define your code below:
-# Tried with a while loop
-# The While Loop did not play nicely. 
 # i = 0
-# result = ""
-# results = []
-# while i < len(sounds):
-#   print(sounds[i])
-#   # results.append(sounds[i])
-#   sounds[i] = (result)
-#   print(result)
-#   result += results
-#   print(results)
+# nums = list(range(1,42))
+# while i < len(nums):
+#   print(nums[i])
+#   i+= 1
+
+
+# # List
+# ducks = ["Donald", "Daisy", "Riri", "Zaza"]
+
+# #Iterate over the list
+# # For
+# for duck in ducks:
+#   print(f"{duck} Duck")
+
+# # While
+# i = 0
+# while i < len(ducks):
+#   print(f"While loop item {i + 1}: {ducks[i]} Duck")
 #   i += 1
-# print(results)
 
-results = ''.join(sounds)
-print(results.upper())
-# With a for Loop
+# #######################
+# sounds = ["super", "cali", "fragil", "istic", "expi", "ali", "docious"]
 
-result = ''
-for segment in sounds:
-  result += segment.upper()
-print(result)
+# # Define your code below:
+# # Tried with a while loop
+# # The While Loop did not play nicely. 
+# # i = 0
+# # result = ""
+# # results = []
+# # while i < len(sounds):
+# #   print(sounds[i])
+# #   # results.append(sounds[i])
+# #   sounds[i] = (result)
+# #   print(result)
+# #   result += results
+# #   print(results)
+# #   i += 1
+# # print(results)
 
-#######################
+# results = ''.join(sounds)
+# print(results.upper())
+# # With a for Loop
 
-# Compare append to extend
-nums = [1,2,3]
+# result = ''
+# for segment in sounds:
+#   result += segment.upper()
+# print(result)
 
-nums.append([4,5])
-print(nums)
+# #######################
 
-# And now if we extend instead
-nums2 = [6,7,8]
-print(nums2)
-nums2.extend([9,10,11])
-print(f"Now everything is in the same list: {nums2}") 
+# # Compare append to extend
+# nums = [1,2,3]
 
-# Insert allows something to inserted precisely
+# nums.append([4,5])
+# print(nums)
 
-phrase = ["The", "duck", "across", "lake"]
+# # And now if we extend instead
+# nums2 = [6,7,8]
+# print(nums2)
+# nums2.extend([9,10,11])
+# print(f"Now everything is in the same list: {nums2}") 
 
-phrase.insert(1, "quick")
-print(phrase)
-phrase.insert(-1, "reflective")
-phrase.insert(-2, "the")
-phrase.insert(3, "skates")
-print(phrase)
+# # Insert allows something to inserted precisely
+
+# phrase = ["The", "duck", "across", "lake"]
+
+# phrase.insert(1, "quick")
+# print(phrase)
+# phrase.insert(-1, "reflective")
+# phrase.insert(-2, "the")
+# phrase.insert(3, "skates")
+# print(phrase)
+
+# barcode = [4,0,2,1,4,8,0,1,2,3]
+
+# barcode.sort() # this changes the original set so be careful. 
+
+# print(barcode)
+
+#     # Create a list called instructors
+#     instructors = []
+     
+#     # Add the following strings to the instructors list 
+#         # "Colt"
+#         # "Blue"
+#         # "Lisa"
+#     instructors.extend(["Colt", "Blue", "Lisa"])
+     
+#     # Remove the last value in the list
+#     instructors.pop()
+     
+#     # Remove the first value in the list
+#     instructors.pop(0)
+     
+#     # Add the string "Done" to the beginning of the list
+#     instructors.insert(0, 'Done')
+################################
+
+# Slices revision
+
+# barcode = [4,0,2,1,4,8,0,1,2,3]
+
+# print(barcode[2:]) # From position 2 onwards
+# print(barcode[-2:]) # From the end, the last two numbers
+
+# # Although the examples are with numbers this also works with sets of words. 
+
+# weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+# weekend = weekdays[-2:]
+# print(weekend)
+# work_week = weekdays[0:5]
+# print(work_week)
+# copy_weekdays = weekdays[:]
+
+# print(f"{copy_weekdays is weekdays}: because although the data is the same they are stored in different bits of memory. ")
+# print(f"Both contain the same data: {copy_weekdays == weekdays}")
+
+# # New idea: List comprehension
+
+# nums = [1,2,3]
+
+# print([x * 10 for x in nums])
+
+# print([d / 3 for d in nums])
+
+# print([str(c) + " " +  "chf" for c in nums]) # Useful for currency, for payments
+
+# emotion = 'fascinated'
+
+# print([letter.upper() for letter in emotion])
+
+############################################
+# List Comprehension practice
+
+acronym = [word[0] for word in ["Electronic", "Dance", "Music"]]
+print(acronym)
+
+icao = [letter[0] for letter in ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot"]]
+cheeky = [letter[0] for letter in ["Tango", "Whiskey", "India", "Tango"]]
+
+print(icao)
+print(cheeky)
+
+even = [num for num in [6,1,2,1,8,5,1] if num % 2 == 0]
+odd = [num for num in [6,1,2,1,8,5,1] if num % 2 != 0]
+print(even)
+print(odd)
