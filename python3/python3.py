@@ -335,16 +335,27 @@
 ############################################
 # List Comprehension practice
 
-acronym = [word[0] for word in ["Electronic", "Dance", "Music"]]
-print(acronym)
+# acronym = [word[0] for word in ["Electronic", "Dance", "Music"]]
+# print(acronym)
 
-icao = [letter[0] for letter in ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot"]]
-cheeky = [letter[0] for letter in ["Tango", "Whiskey", "India", "Tango"]]
+# icao = [letter[0] for letter in ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot"]]
+# cheeky = [letter[0] for letter in ["Tango", "Whiskey", "India", "Tango"]]
 
-print(icao)
-print(cheeky)
+# print(icao)
+# print(cheeky)
 
-even = [num for num in [6,1,2,1,8,5,1] if num % 2 == 0]
-odd = [num for num in [6,1,2,1,8,5,1] if num % 2 != 0]
-print(even)
-print(odd)
+# even = [num for num in [6,1,2,1,8,5,1] if num % 2 == 0]
+# odd = [num for num in [6,1,2,1,8,5,1] if num % 2 != 0]
+# print(even)
+# print(odd)
+
+
+practice = [val for val in [3,6,9] if val in [9,1,3,2,8]]
+print(practice)
+practice2 = [val for val in [0,7,9] if val in [7,9,3]]
+print(practice2)
+
+reverse = [val[::-1].lower() for val in ['retteb', 'no', 'a', 'lemac']] # 
+da_vinci_writing = [val[::-1].lower() for val in ['peek', 'gniyduts', 'yreve', 'yad']]
+print(da_vinci_writing)
+print(reverse)
