@@ -366,97 +366,111 @@
 #     print(number)
 #   elif number / 12 == False:
 #     number + 1
-multiplication_table_1 = [val for val in range(1,11) if val % 1 == 0]
-multiplication_table_2 = [val for val in range(1,21) if val % 2 == 0]
-multiplication_table_3 = [val for val in range(1,31) if val % 3 == 0]
-multiplication_table_4 = [val for val in range(1,41) if val % 4 == 0]
-multiplication_table_5 = [val for val in range(1,51) if val % 5 == 0]
-multiplication_table_6 = [val for val in range(1,61) if val % 6 == 0]
-multiplication_table_7 = [val for val in range(1,71) if val % 7 == 0]
-multiplication_table_8 = [val for val in range(1,81) if val % 8 == 0]
-multiplication_table_9 = [val for val in range(1,91) if val % 9 == 0]
-multiplication_table_10 = [val for val in range(1,101) if val % 10 == 0]
-multiplication_table_11 = [val for val in range(1, 122) if val % 11 == 0]
-multiplication_table_12 = [val for val in range(1, 145) if val % 12 == 0]
+# multiplication_table_1 = [val for val in range(1,11) if val % 1 == 0]
+# multiplication_table_2 = [val for val in range(1,21) if val % 2 == 0]
+# multiplication_table_3 = [val for val in range(1,31) if val % 3 == 0]
+# multiplication_table_4 = [val for val in range(1,41) if val % 4 == 0]
+# multiplication_table_5 = [val for val in range(1,51) if val % 5 == 0]
+# multiplication_table_6 = [val for val in range(1,61) if val % 6 == 0]
+# multiplication_table_7 = [val for val in range(1,71) if val % 7 == 0]
+# multiplication_table_8 = [val for val in range(1,81) if val % 8 == 0]
+# multiplication_table_9 = [val for val in range(1,91) if val % 9 == 0]
+# multiplication_table_10 = [val for val in range(1,101) if val % 10 == 0]
+# multiplication_table_11 = [val for val in range(1, 122) if val % 11 == 0]
+# multiplication_table_12 = [val for val in range(1, 145) if val % 12 == 0]
 
-print(multiplication_table_1)
-print(multiplication_table_2)
-print(multiplication_table_3)
-print(multiplication_table_4)
-print(multiplication_table_5)
-print(multiplication_table_6)
-print(multiplication_table_7)
-print(multiplication_table_8)
-print(multiplication_table_9)
-print(multiplication_table_10)
-print(multiplication_table_11)
-print(multiplication_table_12)
+# print(multiplication_table_1)
+# print(multiplication_table_2)
+# print(multiplication_table_3)
+# print(multiplication_table_4)
+# print(multiplication_table_5)
+# print(multiplication_table_6)
+# print(multiplication_table_7)
+# print(multiplication_table_8)
+# print(multiplication_table_9)
+# print(multiplication_table_10)
+# print(multiplication_table_11)
+# print(multiplication_table_12)
 
-play_with_boolean = [bool(val) for val in [1, True, '', "", 0]]
+# play_with_boolean = [bool(val) for val in [1, True, '', "", 0]]
 
-print(play_with_boolean)
+# print(play_with_boolean)
 
-voweled = "The Quick brown fox jumped over the lazy sheep dog"
-original_phrase = "The happy goat jumped acrosss the high alpine pass before spending some time watching cyclists as they headed up the hill"
-devoweled = ''.join(char for char in voweled if char not in "aeiou")
-devoweled_list_comprehension = [char for char in voweled if char not in "aeiou"]
-devoweled_2 = ''.join(char for char in original_phrase if char not in "aeiou")
-devoweled_2_list_comprehension = [char for char in original_phrase if char not in "aeiou"]
-devcon = ''.join(char for char in original_phrase if char in "aeiou")
-devcon_list_comprehension = [char for char in original_phrase if char in "aeiou"]
-print(devoweled)
-print(devoweled_list_comprehension)
-print(devoweled_2)
-print(devoweled_2_list_comprehension)
-print(devcon)
-print(devcon_list_comprehension)
+# voweled = "The Quick brown fox jumped over the lazy sheep dog"
+# original_phrase = "The happy goat jumped acrosss the high alpine pass before spending some time watching cyclists as they headed up the hill"
+# devoweled = ''.join(char for char in voweled if char not in "aeiou")
+# devoweled_list_comprehension = [char for char in voweled if char not in "aeiou"]
+# devoweled_2 = ''.join(char for char in original_phrase if char not in "aeiou")
+# devoweled_2_list_comprehension = [char for char in original_phrase if char not in "aeiou"]
+# devcon = ''.join(char for char in original_phrase if char in "aeiou")
+# devcon_list_comprehension = [char for char in original_phrase if char in "aeiou"]
+# print(devoweled)
+# print(devoweled_list_comprehension)
+# print(devoweled_2)
+# print(devoweled_2_list_comprehension)
+# print(devcon)
+# print(devcon_list_comprehension)
 
-# answer = ''.join(char for char in 'amazing' if char not in "aeiou") # Incorrect
+# # answer = ''.join(char for char in 'amazing' if char not in "aeiou") # Incorrect
 
-answer = [char for char in "amazing" if char not in "aeiou"]
+# answer = [char for char in "amazing" if char not in "aeiou"]
 
-print(answer)
+# print(answer)
 
-nested_list = [["list one", "part two", "part three"], ["list two", "another part", "part six"], ["list three", "random stuffn", "more random stuff"]]
+# nested_list = [["list one", "part two", "part three"], ["list two", "another part", "part six"], ["list three", "random stuffn", "more random stuff"]]
 
-print(nested_list)
-print(nested_list[1][2])
-print(nested_list[2][2])
+# print(nested_list)
+# print(nested_list[1][2])
+# print(nested_list[2][2])
 
-nested_number_list = [[1,2,3],[4,5,6],[7,8,9]]
+# nested_number_list = [[1,2,3],[4,5,6],[7,8,9]]
 
-for l in nested_number_list:
-  for val in l:
-    print(val) # prints each number on a seperate line. 
+# for l in nested_number_list:
+#   for val in l:
+#     print(val) # prints each number on a seperate line. 
 
-# For mapping
+# # For mapping
 
-coords = [[12.23, 6.12], [12.24, 6.15], [12.26, 6.17]]
+# coords = [[12.23, 6.12], [12.24, 6.15], [12.26, 6.17]]
 
-for loc in coords:
-  for coord in loc:
-    print(coord)
+# for loc in coords:
+#   for coord in loc:
+#     print(coord)
 
-#tic tac toe logic
-#Draw the board
-board = [[num for num in range(1,4)] for val in range(1,4)]
+# #tic tac toe logic
+# #Draw the board
+# board = [[num for num in range(1,4)] for val in range(1,4)]
 
-print(f"tic tac toe logic: {board}")
+# print(f"tic tac toe logic: {board}")
 
-#Draw the player moves
-tct_output = [["X" if num % 2 != 0 else "O" for num in range(1,4)] for val in range(1,4)]
+# #Draw the player moves
+# tct_output = [["X" if num % 2 != 0 else "O" for num in range(1,4)] for val in range(1,4)]
 
-print(f"Hypothetical Tic Tac Toe output: {tct_output}")
+# print(f"Hypothetical Tic Tac Toe output: {tct_output}")
 
-line_of_crosses = ["*" for i in range(1,4)]
-line_of_naughts = ["0" for i in range(4,7)]
-line_of_empties = [" " for i in range(7,10)]
-print(line_of_crosses)
-print(line_of_naughts)
-print(line_of_empties)
-three_count = [[(i * 15) for i in range(1,4)] for num in range(1,4)]
-print(three_count)
-tap_tap_tap = [["t", "a", "p"] for i in range(1,4)]
-print(tap_tap_tap)
-ten_times_ten = [[num for num in range(0,10)] for i in range(0,10)]
-print(ten_times_ten)
+# line_of_crosses = ["*" for i in range(1,4)]
+# line_of_naughts = ["0" for i in range(4,7)]
+# line_of_empties = [" " for i in range(7,10)]
+# print(line_of_crosses)
+# print(line_of_naughts)
+# print(line_of_empties)
+# three_count = [[(i * 15) for i in range(1,4)] for num in range(1,4)]
+# print(three_count)
+# tap_tap_tap = [["t", "a", "p"] for i in range(1,4)]
+# print(tap_tap_tap)
+# ten_times_ten = [[num for num in range(0,10)] for i in range(0,10)]
+# print(ten_times_ten)
+
+############################################################
+#Playing with dictionaries
+
+from calendar import weekday
+
+week_day = {"name": "Saturday", "weekend": True, "weather": "sunny", "pandemic": True, "sick": False }
+another_week_day = dict(name="Sunday", duration=24, day=7, weekend=True, weather="sunny")
+print(week_day)
+print(another_week_day)
+print(week_day["pandemic"])
+print(week_day["name"])
+print(week_day.values())
+print(week_day.keys())
