@@ -433,3 +433,11 @@ elif selected == "2":
   play_again()
 else: 
   print("That choice is not available yet")
+
+import time
+
+print("Good Morning world")
+time.sleep(3)
+print("I slept for three")
+time.sleep(2)
+print("And now for two")
