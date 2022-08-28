@@ -15,3 +15,5 @@ for i in range(21):
 
 cprint("Attention!", 'red', attrs=['bold'], file=sys.stderr)
 cprint("Warning!", 'yellow', attrs=['bold'], file=sys.stderr)
+
+# see: https://pypi.org/project/termcolor/
