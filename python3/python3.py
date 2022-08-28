@@ -474,3 +474,44 @@ print(week_day["pandemic"])
 print(week_day["name"])
 print(week_day.values())
 print(week_day.keys())
+
+for k in week_day.keys():
+  print(f"The key is: {k}")
+for v in week_day.values():
+  print(f"The value is: {v}")
+print("And now for both at once: ")
+print(f"Tuples: {week_day.items()}")
+print(f"Tuples: {another_week_day.items()}")
+
+# An other option is to use:
+
+for k, v in another_week_day.items():
+  print(f"Key: {k}\n value: {v}") 
+
+# This code is a reminder
+##################################
+# for value in donations.values():
+#   total_donations += value
+# print(total_donations)
+##################################
+
+# Using "in"
+print(f"Duration is in another_weekday: {'duration' in another_week_day}")
+
+# We have clear, copy, fromkeys
+
+copy_me = dict(c=1, o=2, m=3, e=4, d=5, i=6, a=7, n=8)
+
+copycat = copy_me.copy()
+
+print(f"Copy_me and Copycat are cloned: {copycat == copy_me}")
+print(f"Copy_me and Copycat are the same: {copycat is copy_me}")
+
+new_bike = {}.fromkeys(['name', 'ype of bike', 'tire width', 'size'])
+print(week_day)
+new_copy = week_day.fromkeys(['name', 'ype of bike', 'tire width', 'size'])
+print(new_bike)
+print(new_copy)
+
+print(week_day.fromkeys(range(1,10), 'unknown')) # {1: 'unknown', 2: 'unknown', 3: 'unknown', 4: 'unknown', 5: 'unknown', 6: 'unknown', 7: 'unknown', 8: 'unknown', 9: 'unknown'}
+
