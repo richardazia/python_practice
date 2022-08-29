@@ -2,6 +2,7 @@ import os
 import time
 from termcolor import colored
 
+
 # From: https://www.linkedin.com/learning/python-essential-training-14898805/solution-it-s-hip-to-be-square?autoSkip=true&autoplay=true&contextUrn=urn%3Ali%3AlyndaLearningPath%3A5f6cf9fe498e1b8929698639&resume=false
 
 # This is the Canvas class. It defines some height and width, and a 
@@ -32,6 +33,7 @@ class Canvas:
         for y in range(self._y):
             print(' '.join([col[y] for col in self._canvas]))
 
+
 class TerminalScribe:
     def __init__(self, canvas):
         self.canvas = canvas
@@ -41,22 +43,22 @@ class TerminalScribe:
         self.pos = [0, 0]
 
     def up(self):
-        pos = [self.pos[0], self.pos[1]-1]
+        pos = [self.pos[0], self.pos[1] - 1]
         if not self.canvas.hitsWall(pos):
             self.draw(pos)
 
     def down(self):
-        pos = [self.pos[0], self.pos[1]+1]
+        pos = [self.pos[0], self.pos[1] + 1]
         if not self.canvas.hitsWall(pos):
             self.draw(pos)
 
     def right(self):
-        pos = [self.pos[0]+1, self.pos[1]]
+        pos = [self.pos[0] + 1, self.pos[1]]
         if not self.canvas.hitsWall(pos):
             self.draw(pos)
 
     def left(self):
-        pos = [self.pos[0]-1, self.pos[1]]
+        pos = [self.pos[0] - 1, self.pos[1]]
         if not self.canvas.hitsWall(pos):
             self.draw(pos)
 
@@ -72,11 +74,13 @@ class TerminalScribe:
         # Sleep for a little bit to create the animation
         time.sleep(self.framerate)
 
-# Create a new Canvas instance that is 30 units wide by 30 units tall 
+
+# Create a new Canvas instance that is 30 units wide by 30 units tall
 canvas = Canvas(45, 45)
 
 # Create a new scribe and give it the Canvas object
 scribe = TerminalScribe(canvas)
+
 
 # Draw a small square
 
@@ -203,26 +207,26 @@ scribe = TerminalScribe(canvas)
 # draw_right()
 
 def downward_steps():
-  scribe.right()
-  scribe.right()
-  scribe.right()
-  scribe.right()
+    scribe.right()
+    scribe.right()
+    scribe.right()
+    scribe.right()
 
-  scribe.down()
-  scribe.down()
-  scribe.down()
-  scribe.down()
+    scribe.down()
+    scribe.down()
+    scribe.down()
+    scribe.down()
+
 
 def upward_steps():
-  scribe.right()
-  scribe.right()
-  scribe.right()
-  scribe.right()
-
-  scribe.up()
-  scribe.up()
-  scribe.up()
-  scribe.up()
+    scribe.right()
+    scribe.right()
+    scribe.right()
+    scribe.right()
+    scribe.up()
+    scribe.up()
+    scribe.up()
+    scribe.up()
 
 
 downward_steps()
