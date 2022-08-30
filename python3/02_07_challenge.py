@@ -76,7 +76,7 @@ class TerminalScribe:
 
 
 # Create a new Canvas instance that is 30 units wide by 30 units tall
-canvas = Canvas(45, 45)
+canvas = Canvas(50, 50)
 
 # Create a new scribe and give it the Canvas object
 scribe = TerminalScribe(canvas)
@@ -229,13 +229,32 @@ def upward_steps():
     scribe.up()
 
 
-downward_steps()
-upward_steps()
-downward_steps()
-upward_steps()
-downward_steps()
-downward_steps()
-upward_steps()
-upward_steps()
-downward_steps()
-downward_steps()
+
+def square_wave():
+    i = 0
+    while i < 2:
+        downward_steps()
+        upward_steps()
+        i += 1
+
+# square_wave()
+
+def square_shape(width, height):
+    w = 0
+    
+    while w < width:
+        scribe.right()
+        w += 1
+    h = 0
+    while h < height:        
+        scribe.down()
+        h += 1
+    while w > 0:
+        scribe.left()
+        w -= 1
+    while h > 0:
+        scribe.up()
+        h -= 1
+
+square_shape(15,15)
+
