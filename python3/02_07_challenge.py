@@ -256,5 +256,16 @@ def square_shape(width, height):
         scribe.up()
         h -= 1
 
-square_shape(15,15)
-
+print("Welcome to this drawing app")
+print("Which app would you like to use? \n 1. Square Shape or \n 2. Square Wave")
+choice = input("please enter 1 or 2: ")
+if choice == "1":
+    print("Please specify a number between 1 and 50 for width")
+    square_width = int(input(">> "))
+    print("Please specify a number between 1 and 50 for width")
+    square_height = int(input(">> "))
+    square_shape(square_width,square_height)
+elif choice == "2":
+    square_wave()
+else:
+    print("Your choice was not recognised")
