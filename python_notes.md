@@ -20,6 +20,10 @@ Input prompts the user to enter data
 age = 19
 int(age)
 
+## Bytes
+Simple data
+- we can specify how many bytes we want by typing bytes(n) where n is the number of bites we want.
+
 ## f strings
 a way to generate strings that contain interpolated expressions
 
