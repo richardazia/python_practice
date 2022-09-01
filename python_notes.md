@@ -309,4 +309,19 @@ list[from:to:increment]
 - uses a decorator such as @classmethod
 - inheritance is similar to javascript
 
+## Import OS functionality
+- glob to search for files and display them
+- walk to show file tree within directories for directories and files
+  - It can be top down or bottom up.
+  - can be used to delete files and more
+## from pathlib import Path
+- presents file paths as objects instead of strings
+  - entry.name
+  - entry.parent
+  - entry.parent.parent
+  - entry.stem
+  - entry.suffix
+  - Path.home
+  - Path('directory_name')
+
 
