@@ -147,6 +147,9 @@ If we run an outer loop with an innter loop then the outer loop will go through 
 ## Functions
 - use def to define them They have a name, and then the action that they're meant to carry out. 
 
+## Lamda Functions
+- lambda functions are mini functions that fit on one line. 
+
 ## return
 - return returns what it is expected to return but after this the function stops. 
 - code after a return will not run. 

@@ -269,3 +269,4 @@ elif choice == "2":
     square_wave()
 else:
     print("Your choice was not recognised")
+
