@@ -2,20 +2,20 @@
 
 # We can use += with strings
 
-#month = "The month of"
-#month += " August, and it is the 18th day"
+# month = "The month of"
+# month += " August, and it is the 18th day"
 
-#print(month)
+# print(month)
 
-#print("How far did you cycle today?")
-#distance = input()
-#distance_in_miles = float(distance) * 0.621371
-#print(f"You cycled {distance} kilometres. That is equal to {round(distance_in_miles, 2)} miles.")
+# print("How far did you cycle today?")
+# distance = input()
+# distance_in_miles = float(distance) * 0.621371
+# print(f"You cycled {distance} kilometres. That is equal to {round(distance_in_miles, 2)} miles.")
 
-#print("How far did you cycle this year?")
-#distance = input()
-#distance_in_miles = float(distance) * 0.621371
-#print(f"You cycled {distance} kilometres. That is equal to {round(distance_in_miles, 2)} miles.")
+# print("How far did you cycle this year?")
+# distance = input()
+# distance_in_miles = float(distance) * 0.621371
+# print(f"You cycled {distance} kilometres. That is equal to {round(distance_in_miles, 2)} miles.")
 
 # # NO TOUCHING PLEASE---------------
 # from random import randint
@@ -36,14 +36,14 @@
 # elif choice != 7:
 #     print("unlucky")
 
-  
+
 # city = input("What city do you live in? ")
 
 # if city == "Nyon" or city == "Lausanne" or city == "Geneva":
 #     print("You live within cycling distance.")
 # else:
 #   print("That's not within easy cycling distance. ")
-  
+
 # print("How old are you?: ")
 # age = int(input("> "))
 
@@ -101,11 +101,11 @@
 # for time in range(times):
 #   print("Don't fly a kite during a hailstorm, you will damage the kite.")
 
-  # challenge: 
-  # For numbers from 1-20
-  # 4 and 13 are unlucky
-  # print no. is even for even numbers
-  # print no. is odd for odd numbers
+# challenge:
+# For numbers from 1-20
+# 4 and 13 are unlucky
+# print no. is even for even numbers
+# print no. is odd for odd numbers
 
 # My solution - the unlucky conditions need, to be first, to be displayed.
 
@@ -188,7 +188,7 @@
 #     number = randint(1,10)
 #     i += 1
 
-  # Define my_stuff 
+# Define my_stuff
 # my_stuff = ["A phone", "a laptop", 3.5, True, False, "a second laptop", "a chair", "a desk"]
 
 # Define nums - two ways of getting numbers from 1-99 
@@ -281,19 +281,19 @@
 
 #     # Create a list called instructors
 #     instructors = []
-     
+
 #     # Add the following strings to the instructors list 
 #         # "Colt"
 #         # "Blue"
 #         # "Lisa"
 #     instructors.extend(["Colt", "Blue", "Lisa"])
-     
+
 #     # Remove the last value in the list
 #     instructors.pop()
-     
+
 #     # Remove the first value in the list
 #     instructors.pop(0)
-     
+
 #     # Add the string "Done" to the beginning of the list
 #     instructors.insert(0, 'Done')
 ################################
@@ -462,11 +462,11 @@
 # print(ten_times_ten)
 
 ############################################################
-#Playing with dictionaries
+# Playing with dictionaries
 
 from calendar import weekday
 
-week_day = {"name": "Saturday", "weekend": True, "weather": "sunny", "pandemic": True, "sick": False }
+week_day = {"name": "Saturday", "weekend": True, "weather": "sunny", "pandemic": True, "sick": False}
 another_week_day = dict(name="Sunday", duration=24, day=7, weekend=True, weather="sunny")
 print(week_day)
 print(another_week_day)
@@ -476,9 +476,9 @@ print(week_day.values())
 print(week_day.keys())
 
 for k in week_day.keys():
-  print(f"The key is: {k}")
+    print(f"The key is: {k}")
 for v in week_day.values():
-  print(f"The value is: {v}")
+    print(f"The value is: {v}")
 print("And now for both at once: ")
 print(f"Tuples: {week_day.items()}")
 print(f"Tuples: {another_week_day.items()}")
@@ -486,7 +486,7 @@ print(f"Tuples: {another_week_day.items()}")
 # An other option is to use:
 
 for k, v in another_week_day.items():
-  print(f"Key: {k}\n value: {v}") 
+    print(f"Key: {k}\n value: {v}")
 
 # This code is a reminder
 ##################################
@@ -507,11 +507,83 @@ copycat = copy_me.copy()
 print(f"Copy_me and Copycat are cloned: {copycat == copy_me}")
 print(f"Copy_me and Copycat are the same: {copycat is copy_me}")
 
-new_bike = {}.fromkeys(['name', 'ype of bike', 'tire width', 'size'])
+new_bike = {}.fromkeys(['name', 'type of bike', 'tire width', 'size'])
 print(week_day)
-new_copy = week_day.fromkeys(['name', 'ype of bike', 'tire width', 'size'])
+new_copy = week_day.fromkeys(['name', 'type of bike', 'tire width', 'size'])
 print(new_bike)
 print(new_copy)
 
-print(week_day.fromkeys(range(1,10), 'unknown')) # {1: 'unknown', 2: 'unknown', 3: 'unknown', 4: 'unknown', 5: 'unknown', 6: 'unknown', 7: 'unknown', 8: 'unknown', 9: 'unknown'}
+print(week_day.fromkeys(range(1, 10), 'unknown'))  # {1: 'unknown', 2: 'unknown', 3: 'unknown', 4: 'unknown', 5: 'unknown', 6: 'unknown', 7: 'unknown', 8: 'unknown', 9: 'unknown'}
+
+# This code picks a random food item:
+from random import choice
+
+food = choice(["cheese pizza", "quiche", "morning bun", "gummy bear", "tea cake"])  # DON'T CHANGE!
+
+# DON'T CHANGE THIS DICTIONARY EITHER!
+bakery_stock = {
+    "almond croissant": 12,
+    "toffee cookie": 3,
+    "morning bun": 1,
+    "chocolate chunk cookie": 9,
+    "tea cake": 25
+}
+
+# YOUR CODE GOES BELOW:
+print(food)
+
+if food in bakery_stock:
+  print(f"Coming right up, your {food} will be ready shortly. :-)")
+else:
+  print(f"At this moment in time we do not offer {food}. ")
+
+bird_flock = {
+  "duck": "Duck",
+  "turkey": "Turkey",
+  "goose": "silly goose",
+  "chicken": "Walking chicken"
+}
+
+print("daffy" in bird_flock)
+print("duck" in bird_flock) # This looks for the key, not the value.
+
+cereal = dict(a="snap", b="crackle", c="pop", d="This is not a spoon", e="too soggy", f="the milk has gone off")
+print(cereal)
+cereal.pop('c')
+cereal.popitem() # to pop an item at random
+print(cereal)
+spoon = {"spoon": "small spoon"}
+
+spoon.update(cereal)
+print(spoon)
+
+spoon['b'] = "thrifty ocelot"
+
+print(spoon)
+
+cow_antics = {
+    'title': 'Alpine cows',
+    'location': 'Jura Mountains',
+    'canton': 'Vaud',
+    'country': 'Switzerland',
+    'audio': 'cowbells, mooing',
+    'landscape': 'mountainous',
+    'videos': [
+        {'title': 'Cows above', 'camera': 'me', 'duration': 82},
+        {'title': 'Cows below', 'camera': 'me', 'duration': 32},
+        {'title': 'Alpenhorn playing cows', 'camera': 'me', 'duration': 73}
+    ]
+}
+
+print(cow_antics)
+
+tot_len = 0
+for video in cow_antics['videos']:
+    tot_len += video['duration']
+
+print(tot_len)
+
+odd_or_even = { num:("even" if num % 2 == 0 else "odd") for num in range(1,100)}
+
+print(odd_or_even)
 
