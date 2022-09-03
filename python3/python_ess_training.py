@@ -135,3 +135,23 @@ fun_roller = Rollerblade("Richard")
 
 fun_roller.grass_stop()
 fun_roller.fell_over()
+
+class Hike:
+    def __init__(self, name, gain, effort):
+        self.name = name
+        self.gain = gain
+        self.effort = effort
+
+    def easy_pease(self):
+        print(f"{self.name} is not easy peasy. Very comfortable")
+
+    def quite_exhausting(self):
+        print("That was quite exhausting. I'm impatient to have a drink later")
+
+
+day_36 = Hike("Leukerbad", 1000, "strenuous")
+
+
+day_36.quite_exhausting()
+day_36.easy_pease()
+
