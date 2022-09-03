@@ -116,3 +116,22 @@ def revised_args(*args):
 
 
 revised_args(2, 7, 3, 6, 8, 8, 1, 1, 0)
+
+
+class Rollerblade:
+    def __init__(self, name):
+        self.name = name
+        self.slope = 'False'
+        self.comfort = "still learning"
+
+    def grass_stop(self):
+        print("Perfect stopping grass")
+
+    def fell_over(self):
+        print("I fell so fast I helicoptered")
+
+
+fun_roller = Rollerblade("Richard")
+
+fun_roller.grass_stop()
+fun_roller.fell_over()
