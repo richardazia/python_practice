@@ -587,3 +587,31 @@ odd_or_even = { num:("even" if num % 2 == 0 else "odd") for num in range(1,100)}
 
 print(odd_or_even)
 
+list1 = ['goat', 'orca', 'platypus']
+list2 = ['mountains', 'oceans', 'lakes and rivers']
+
+biome = {list1[i]: list2[i] for i in range(0,3)}
+
+print(biome)
+
+polite = ['Thank you', 'That was very nice', 'Oh you should not have']
+impolite = ["*ç%ç* you", "What the bell did you do that for", "I didn't ask for you to do that."]
+
+use_polite_not_impolite = {polite[t]: impolite[t] for t in range(0,3)}
+
+print(use_polite_not_impolite)
+
+french = ['Bonjour', 'Au Revoir', 'Merci']
+english = ['Hello', 'goodbye', 'thanks']
+
+translate_fr_gb_uk = {french[i]: english[i] for i in range(0,3)}
+
+print(translate_fr_gb_uk)
+
+user_name = ['Bob', 'Cynthia', "Cilgia"]
+pass_word = ['strawberries', 'triceratops', 'crossover harmonica']
+
+unsafe_password_storage = {user_name[i]: pass_word[i] for i in range(0,3)}
+
+print(unsafe_password_storage)
+
