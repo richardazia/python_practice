@@ -309,6 +309,13 @@ list[from:to:increment]
 - uses a decorator such as @classmethod
 - inheritance is similar to javascript
 
+# Working With Files
+- w create a new file or truncate an existing one
+- x open a file for exclusive creation, fails it it exists
+- a like with vim you append new content to the end of a file.
+- b creates a binary file
+- t creates and open a file in text mode
+
 ## Import OS functionality
 - glob to search for files and display them
 - walk to show file tree within directories for directories and files
