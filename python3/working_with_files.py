@@ -147,22 +147,58 @@
 
 # I suspect that the problem I had before is related to using windows rather than a mac.
 # URL of code I tried: https://pynative.com/python-count-number-of-files-in-a-directory/
+############################
+# import os
+#
+# dir_path = r'.'
+# file = 0
+#
+# for path in os.listdir(dir_path):
+#     if os.path.isfile(os.path.join(dir_path, path)):
+#         file += 1
+#
+# print(f"Number of files {file}")
+#
+# import fnmatch
+#
+# path = '.'
+#
+# count = len(fnmatch.filter(os.listdir(path), '*.*'))
+#
+# print(f"File Count with 'fnmath': {count}")
+############################
+# https://pynative.com/python-create-file/
+import os
+# fp = open('monday_later.txt', 'x')
+# fp.close()
+
+fp = open('huts.txt', 'w')
+fp.write('Python is creating and then adding text to a file')
+fp.close()
+
+fp = open('consolidation.txt', 'a')
+fp.write('\nI am not a PBY-Catalina')
+fp.write('\nA frolicking chicken')
+fp.close()
+
+# add datetime log info
+
+from datetime import datetime
+
+current_time = datetime.now()
+
+filename = current_time.strftime('%d-%m-%Y.text')
+with open(filename, 'a') as fp:
+    print(f"Created: {filename}")
+
+seconds = current_time.strftime('%d-%m-%Y-%H-%M-%S.txt')
+with open(seconds, 'w') as fp:
+    print(f"Created: {seconds}")
+
+# To check what we have done
 
 import os
 
-dir_path = r'.'
-file = 0
+print(os.listdir())
 
-for path in os.listdir(dir_path):
-    if os.path.isfile(os.path.join(dir_path, path)):
-        file += 1
-
-print(f"Number of files {file}")
-
-import fnmatch
-
-path = '.'
-
-count = len(fnmatch.filter(os.listdir(path), '*.*'))
-
-print(f"File Count with 'fnmath': {count}")
+print(f"File created: {os.path.isfile('huts.txt')}")
