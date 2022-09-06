@@ -1,3 +1,5 @@
+import json
+
 # based on Linkedin Learning course: Python: Working with files
 # URL: https://www.linkedin.com/learning/python-working-with-files/navigate-the-file-system-with-os-module?autoSkip=true&autoplay=true&resume=false
 # import glob
@@ -202,3 +204,63 @@ import os
 print(os.listdir())
 
 print(f"File created: {os.path.isfile('huts.txt')}")
+
+########################################
+# Python - working with files course
+
+def print_content():
+    f = open('read_me_now.txt', 'r')
+    contents = f.read()
+    print(contents)
+    f.close()
+
+
+def write_new_content():
+    f = open('read_me_now.txt', 'a')
+    f.write("\nThe sun does not always rise at the same time. It changes by three minutes per day, depending on where you live\neof")
+    f.close
+
+
+def read_ten_bytes():
+    with open('read_me_now.txt', 'r') as f:
+        print(f.read(15))
+
+
+def print_file_content_readlines():
+    with open('read_me_now.txt', 'r') as f:
+        lines = f.readlines()
+        print(lines)
+        print(f"Line 3: {lines[3]}")
+
+
+def teleprompter():
+    with open('read_me_now.txt', 'r') as f:
+        line = f.readline()
+        ln = 0
+        while line != '':
+
+            print(f"{ln}: {line}")
+            line = f.readline()
+            ln += 1
+################################
+
+
+def read_and_display_json():
+    with open('duck.json') as f:
+        content_json = json.load(f)
+        print("I am JSON")
+        print(content_json)
+
+
+if __name__ == '__main__':
+    print_content()
+    write_new_content()
+    print_content()
+    read_ten_bytes()
+    print_file_content_readlines()
+    read_ten_bytes()
+    teleprompter()
+    read_and_display_json()
+
+
+
