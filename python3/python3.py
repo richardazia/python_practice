@@ -615,3 +615,69 @@ unsafe_password_storage = {user_name[i]: pass_word[i] for i in range(0,3)}
 
 print(unsafe_password_storage)
 
+# Using dictionary comprehension
+
+person = [["name", "Joe"], ["job", "blogger"], ["city", "Bern"]]
+
+option_1 = {text[0]: text[1] for text in person}
+
+print(option_1)
+
+option_2 = {k:v for k,v in person}
+print(option_2)
+
+simplest_option = dict(person)
+print(simplest_option)
+
+# Dictionary comprehension with a string
+joke = {chiffre: "tronc" for chiffre in "123456"}
+joke_2 = {quantity: "trouille" for quantity in "123456"}
+joke_3 = {quantity: "non" for quantity in "123456"}
+print(joke)
+print(joke_2)
+print(joke_3)
+
+# dictionary comprehension with dict
+
+tricycle = dict.fromkeys("tricycle", 1)
+print(tricycle)
+hard_to_read = dict.fromkeys("hard to read", 5)
+print(hard_to_read)
+
+# chr() with a number in the brackets will return a number. chr(65) returns A
+# chr(12)
+
+answer = {number: chr(number) for number in range(65, 91)}
+print(answer)
+
+bonus_answer = {number: chr(number) for number in range(1, 65)}
+print(bonus_answer)
+
+locations = {
+    (46.2044, 6.1432): "Geneva",
+    (46.5197, 6.6323): "Lausanne",
+    (51.5072, 0.1276): "London",
+}
+
+print(locations)
+
+tuple_count = ("Duck", "frog", "lemming", "goat", "goat", "chicken", "ox", "goat")
+
+print(tuple_count.count("goat"))
+print(f"The index for Duck: {tuple_count.index('Duck')}")
+
+# Playing with sets
+
+words = set(["superb", "fantastic", "stupendous", "tasty", "bizarre", "languid", "merged", "walking", "cycling"])
+print(list(set(words)))
+print(len(set(words)))
+print(type(words))
+words.add("chewing")
+words.add("singing")
+words.add("mot vulgaire")
+
+print(words)
+
+words.remove("mot vulgaire")
+print(words)
+

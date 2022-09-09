@@ -238,6 +238,8 @@ list[from:to:increment]
 
 # Tuples
 - simple list
+- faster than lists
+- faster code
 - immutable - equivalent to constant
 - Ordered lists
 - fewer methods available
@@ -263,6 +265,7 @@ list[from:to:increment]
 * order is important when using params, *args, def params and **kwargs. 
 * For kwargs remember to use a key and value every time. 
 - We unpack by using a * sum(*numbers). If we passed numbers in sum directly we would get an unsupported operand type for += 'int' and 'list'
+* discard does the same as remove, but without error messages. 
 
 # Exceptions and errors
 * https://docs.python.org/3/library/exceptions.html for up to date exceptions
