@@ -3,38 +3,56 @@ import turtle
 # The constants
 WIDTH = 500
 HEIGHT = 500
-DELAY = 20
+DELAY = 400
+
+# The Turtle
+snake = turtle.Turtle()
+snake.shape("square")
+snake.penup()
 
 # Tell the turtle what to do
 
-def move_turtle():
-    genesis_the_turtle.forward(1)
-    genesis_the_turtle.right(1)
+
+def move_snake():
+    snake.clearstamps()
+
+    new_head = snake[-1].copy()
+    new_head[0] += 20
+
+    snake.append(new_head)
+
+    snake.pop(0)
+
+    for segment in snake:
+        snake.goto(segment[0], segment[1])
+        snake.stamp()
+
+    # update screen
     screen.update()
-    screen.ontimer(move_turtle, DELAY)
+
+    # Set timer
+    snake.ontimer(move_snake, DELAY)
+
 
 # create the canvas/window
 screen = turtle.Screen()
 screen.setup(WIDTH, HEIGHT)
-screen.title("The Garden")
+screen.title("Snake")
 screen.bgcolor("cyan")
 screen.tracer(0)  # We can also use False. It turns off the trace behind the turtle
 
-# And now concolidation, genesis the Turtle, named after my bike, not the band
+# And now consolidation, genesis the Turtle, named after my bike, not the band
 
-# The Turtle
-genesis_the_turtle = turtle.Turtle()
-genesis_the_turtle.shape("circle")
-genesis_the_turtle.color("green")
-genesis_the_turtle.shapesize(60 / 20)  # where 60 is the desired size and 20 is the default value.
-genesis_the_turtle.stamp()
-genesis_the_turtle.penup()
-genesis_the_turtle.shapesize(10 / 20)
-genesis_the_turtle.goto(120, 240)
-genesis_the_turtle.stamp()
+# Create the snake as a list of coordinated pairs
+snake = [[0, 0], [20, 0], [40, 0], [60, 0]]
 
-# Entice the turtle to move around
 
-move_turtle()
+# Snake init
+# for segment in snake:
+#     snake.goto(segment[0], segment[1])
+#     snake.stamp()
+
+# Set things in motion by calling the function
+move_snake()
 
 turtle.done()
