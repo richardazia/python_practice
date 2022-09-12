@@ -1,9 +1,11 @@
+import random
 import turtle
 
 # The constants
 WIDTH = 500
 HEIGHT = 500
-DELAY = 400
+DELAY = 200
+FOOD_SIZE = 10
 
 # use a dictionary for the offsets
 offsets = {
@@ -12,6 +14,7 @@ offsets = {
     "left": (-20, 0),
     "right": (20, 0),
 }
+
 
 # User direction instructions
 def go_up():
@@ -39,29 +42,55 @@ def go_left():
 
 
 # Tell the turtle what to do
-def move_snake():
+def game_loop():
     stamper.clearstamps()
 
     new_head = snake[-1].copy()
     new_head[0] += offsets[snake_direction][0]
     new_head[1] += offsets[snake_direction][1]
 
-    # update snake head position
-    snake.append(new_head)
+    # Collision detection
+    if new_head in snake or new_head[0] < - WIDTH / 2 or new_head[0] > WIDTH / 2 \
+        or new_head[1] < - HEIGHT / 2 or new_head[1] > HEIGHT / 2:
+        turtle.bye()
+    else:
+        # update snake head position
+        snake.append(new_head)
 
-    # remove snake tail
-    snake.pop(0)
+        # remove snake tail
+        if not food_collection():
+            snake.pop(0)
 
-    for segment in snake:
-        stamper.goto(segment[0], segment[1])
-        stamper.stamp()
+        for segment in snake:
+            stamper.goto(segment[0], segment[1])
+            stamper.stamp()
 
-    # update screen
-    screen.update()
+        # update screen
+        screen.update()
 
-    # Set timer
-    turtle.ontimer(move_snake, DELAY)
+        # Set timer
+        turtle.ontimer(game_loop, DELAY)
 
+
+def food_collection():
+    global food_pos
+    if get_distance(snake[-1], food_pos) < 20:
+        food_pos = get_random_food_pos()
+        food.goto(food_pos)
+        return True
+    return False
+
+def get_random_food_pos():
+    x = random.randint(- WIDTH / 2 + FOOD_SIZE, WIDTH / 2 - FOOD_SIZE)
+    y = random.randint(- HEIGHT / 2 + FOOD_SIZE, HEIGHT / 2 - FOOD_SIZE)
+    return (x, y)
+
+
+def get_distance(pos1, pos2):
+    x1, y1 = pos1
+    x2, y2 = pos2
+    distance = ((y2 - y1) ** 2 + (x2 - x1) ** 2) ** 0.5 # Pythagoras theorem used in gaming
+    return distance
 
 # create the canvas/window
 screen = turtle.Screen()
@@ -86,13 +115,21 @@ stamper.penup()
 snake = [[0, 0], [20, 0], [40, 0], [60, 0]]
 snake_direction = 'up'
 
-
 # Snake init
 for segment in snake:
     stamper.goto(segment[0], segment[1])
     stamper.stamp()
 
+
+# Food
+food = turtle.Turtle()
+food.shape("circle")
+food.color("red")
+food.shapesize(FOOD_SIZE / 20)
+food.penup()
+food_pos = get_random_food_pos()
+food.goto(food_pos)
 # Set things in motion by calling the function
-move_snake()
+game_loop()
 
 turtle.done()
