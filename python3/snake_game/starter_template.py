@@ -16,29 +16,27 @@ offsets = {
 }
 
 
-# User direction instructions
-def go_up():
+def bind_direction_keys():
+    screen.onkey(lambda: set_snake_direction("up"), "Up")
+    screen.onkey(lambda: set_snake_direction("down"), "Down")
+    screen.onkey(lambda: set_snake_direction("left"), "Left")
+    screen.onkey(lambda: set_snake_direction("right"), "Right")
+
+
+def set_snake_direction(direction):
     global snake_direction
-    if snake_direction != "d0wnn":
-        snake_direction = "up"
-
-
-def go_right():
-    global snake_direction
-    if snake_direction != "left":
-        snake_direction = "right"
-
-
-def go_down():
-    global snake_direction
-    if snake_direction != "up":
-        snake_direction = "down"
-
-
-def go_left():
-    global snake_direction
-    if snake_direction != "right":
-        snake_direction = "left"
+    if direction == "up":
+        if direction != "down":
+            snake_direction = "up"
+    elif direction == "down":
+        if direction != "up":
+            snake_direction = "down"
+    elif direction == "right":
+        if direction != "left":
+            snake_direction = "right"
+    elif direction == "left":
+        if direction != "right":
+            snake_direction = "left"
 
 
 # Tell the turtle what to do
@@ -114,10 +112,7 @@ screen.tracer(0)  # We can also use False. It turns off the trace behind the tur
 
 # And now to make it interactive using event handlers in python
 screen.listen()
-screen.onkey(go_up, "Up")
-screen.onkey(go_down, "Down")
-screen.onkey(go_left, "Left")
-screen.onkey(go_right, "Right")
+bind_direction_keys()
 # And now consolidation, genesis the Turtle, named after my bike, not the band
 
 # Stamper the turtle
