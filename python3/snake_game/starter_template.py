@@ -14,6 +14,7 @@ offsets = {
     "left": (-20, 0),
     "right": (20, 0),
 }
+global game_paused
 
 
 def bind_direction_keys():
@@ -21,9 +22,10 @@ def bind_direction_keys():
     screen.onkey(lambda: set_snake_direction("down"), "Down")
     screen.onkey(lambda: set_snake_direction("left"), "Left")
     screen.onkey(lambda: set_snake_direction("right"), "Right")
+    screen.onkey(lambda: set_snake_direction("p"), "p")
 
 
-def set_snake_direction(direction):
+def set_snake_direction(direction, game_paused=False):
     global snake_direction
     if direction == "up":
         if direction != "down":
@@ -37,6 +39,12 @@ def set_snake_direction(direction):
     elif direction == "left":
         if direction != "right":
             snake_direction = "left"
+    else:
+        if direction == "p":
+            if not game_paused:
+                True
+            elif game_paused == True:
+                game_paused == False
 
 
 # Tell the turtle what to do
@@ -49,7 +57,7 @@ def game_loop():
 
     # Collision detection
     if new_head in snake or new_head[0] < - WIDTH / 2 or new_head[0] > WIDTH / 2 \
-        or new_head[1] < - HEIGHT / 2 or new_head[1] > HEIGHT / 2:
+            or new_head[1] < - HEIGHT / 2 or new_head[1] > HEIGHT / 2:
         reset()
     else:
         # update snake head position
@@ -67,18 +75,25 @@ def game_loop():
         screen.title(f"Snake Game. Score: {score}")
         screen.update()
 
-        # Set timer
-        turtle.ontimer(game_loop, DELAY)
+        def pause_game(game_paused):
+            if not game_paused:
+                # Set timer
+                turtle.ontimer(game_loop, DELAY)
+            else:
+                screen.title(f"Game currently paused: {game_paused}")
+
+        pause_game(game_paused)
 
 
 def food_collection():
-    global food_pos, score # Notice that we can add more than one global value
+    global food_pos, score  # Notice that we can add more than one global value
     if get_distance(snake[-1], food_pos) < 20:
         score += 4
         food_pos = get_random_food_pos()
         food.goto(food_pos)
         return True
     return False
+
 
 def get_random_food_pos():
     x = random.randint(- WIDTH / 2 + FOOD_SIZE, WIDTH / 2 - FOOD_SIZE)
@@ -89,7 +104,7 @@ def get_random_food_pos():
 def get_distance(pos1, pos2):
     x1, y1 = pos1
     x2, y2 = pos2
-    distance = ((y2 - y1) ** 2 + (x2 - x1) ** 2) ** 0.5 # Pythagoras theorem used in gaming
+    distance = ((y2 - y1) ** 2 + (x2 - x1) ** 2) ** 0.5  # Pythagoras theorem used in gaming
     return distance
 
 
