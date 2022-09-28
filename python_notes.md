@@ -20,6 +20,10 @@ Input prompts the user to enter data
 age = 19
 int(age)
 
+## Bytes
+Simple data
+- we can specify how many bytes we want by typing bytes(n) where n is the number of bites we want.
+
 ## f strings
 a way to generate strings that contain interpolated expressions
 
@@ -143,6 +147,9 @@ If we run an outer loop with an innter loop then the outer loop will go through 
 ## Functions
 - use def to define them They have a name, and then the action that they're meant to carry out. 
 
+## Lamda Functions
+- lambda functions are mini functions that fit on one line. 
+
 ## return
 - return returns what it is expected to return but after this the function stops. 
 - code after a return will not run. 
@@ -231,6 +238,8 @@ list[from:to:increment]
 
 # Tuples
 - simple list
+- faster than lists
+- faster code
 - immutable - equivalent to constant
 - Ordered lists
 - fewer methods available
@@ -256,6 +265,7 @@ list[from:to:increment]
 * order is important when using params, *args, def params and **kwargs. 
 * For kwargs remember to use a key and value every time. 
 - We unpack by using a * sum(*numbers). If we passed numbers in sum directly we would get an unsupported operand type for += 'int' and 'list'
+* discard does the same as remove, but without error messages. 
 
 # Exceptions and errors
 * https://docs.python.org/3/library/exceptions.html for up to date exceptions
@@ -301,5 +311,27 @@ list[from:to:increment]
 - methods that are available on the class directly
 - uses a decorator such as @classmethod
 - inheritance is similar to javascript
+
+# Working With Files
+- w create a new file or truncate an existing one
+- x open a file for exclusive creation, fails it it exists
+- a like with vim you append new content to the end of a file.
+- b creates a binary file
+- t creates and open a file in text mode
+
+## Import OS functionality
+- glob to search for files and display them
+- walk to show file tree within directories for directories and files
+  - It can be top down or bottom up.
+  - can be used to delete files and more
+## from pathlib import Path
+- presents file paths as objects instead of strings
+  - entry.name
+  - entry.parent
+  - entry.parent.parent
+  - entry.stem
+  - entry.suffix
+  - Path.home
+  - Path('directory_name')
 
 
