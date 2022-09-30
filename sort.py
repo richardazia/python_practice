@@ -58,3 +58,52 @@ def mergesort(dataset):
 print(merge_array)
 mergesort(merge_array)
 print(merge_array)
+
+# Quicksort
+print("Quicksort")
+quicksort_array = [4,3,6,7,8,12,90,2,5,45,23,16,8,32,18,42,38]
+
+def quickSort(dataset, first, last):
+    if first < last:
+        # Find the split point
+        pivotIdx = partition(dataset, first, last)
+
+        #Sort the two partitions
+        quickSort(dataset, first, pivotIdx - 1)
+        quickSort(dataset, pivotIdx + 1, last)
+
+def partition(datavalues, first, last):
+    # Choose the first pivot
+    pivotvalue = datavalues[first]
+    # Define the upper and lower indexes
+    lower = first + 1
+    upper = last
+
+    # Start sorting the data
+    done = False
+    while not done:
+        #Advance the lower index
+        while lower <= upper and datavalues[lower] <= pivotvalue:
+            lower += 1
+        #Advance the upper index
+        while datavalues[upper] >= pivotvalue and upper >= lower:
+            upper -= 1
+        #When the two indexes converge we have found the split point
+        if upper < lower:
+            done = True
+        else:
+            temp = datavalues[lower]
+            datavalues[lower] = datavalues[upper]
+            datavalues[upper] = temp
+
+    # Swap the pivot value when the split point is found
+    temp = datavalues[first]
+    datavalues[first] = datavalues[upper]
+    datavalues[upper] = temp
+
+    # return the split point index
+    return upper
+
+print(quicksort_array)
+quickSort(quicksort_array, 0, len(quicksort_array) -1 )
+print(quicksort_array)
